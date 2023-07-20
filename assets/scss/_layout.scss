@@ -87,7 +87,7 @@ html, body, #wrap, #container {
     align-items: center;
     background-color: #fff;
     transition: clip-path .5s .5s cubic-bezier(.57,.24,.5,1.04);
-    clip-path: ellipse(100% 100% at 0% 50%);
+    clip-path: ellipse(100% 80% at 0% 50%);
     overflow: hidden;
     // &::after {
     //     content: '';
@@ -109,7 +109,7 @@ html, body, #wrap, #container {
         word-break: break-all;
         
 
-        transform: translateX(-20%) rotate(-20deg);
+        transform: translateX(-50%) rotate(-20deg);
 
         div {
             display: flex;
@@ -135,12 +135,12 @@ html, body, #wrap, #container {
     width: 200%;
     left: 0;
     top: 0;
-    transition: left .5s ease-in-out;
+    transition: transform .5s ease-in-out;
     &.on {
-        left: -100%;
-        transition: left .5s .5s ease-in-out;
+        transform: translateX(-50%);
+        transition: transform .5s .5s ease-in-out;
         .main_wrap {
-            transition: all .5s cubic-bezier(.57,.24,.5,1.04);
+            transition: clip-path .5s cubic-bezier(.57,.24,.5,1.04);
             clip-path: ellipse(0 50% at 0% 50%);
         }
         .nav {

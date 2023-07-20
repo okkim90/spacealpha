@@ -2625,8 +2625,8 @@ html, body, #wrap, #container {
   transition: -webkit-clip-path 0.5s 0.5s cubic-bezier(0.57, 0.24, 0.5, 1.04);
   transition: clip-path 0.5s 0.5s cubic-bezier(0.57, 0.24, 0.5, 1.04);
   transition: clip-path 0.5s 0.5s cubic-bezier(0.57, 0.24, 0.5, 1.04), -webkit-clip-path 0.5s 0.5s cubic-bezier(0.57, 0.24, 0.5, 1.04);
-  -webkit-clip-path: ellipse(100% 100% at 0% 50%);
-          clip-path: ellipse(100% 100% at 0% 50%);
+  -webkit-clip-path: ellipse(100% 80% at 0% 50%);
+          clip-path: ellipse(100% 80% at 0% 50%);
   overflow: hidden;
 }
 .main_wrap .main_txt {
@@ -2636,7 +2636,7 @@ html, body, #wrap, #container {
   text-align: center;
   font-weight: bold;
   word-break: break-all;
-  transform: translateX(-20%) rotate(-20deg);
+  transform: translateX(-50%) rotate(-20deg);
 }
 .main_wrap .main_txt div {
   display: flex;
@@ -2660,14 +2660,16 @@ html, body, #wrap, #container {
   width: 200%;
   left: 0;
   top: 0;
-  transition: left 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 .container.on {
-  left: -100%;
-  transition: left 0.5s 0.5s ease-in-out;
+  transform: translateX(-50%);
+  transition: transform 0.5s 0.5s ease-in-out;
 }
 .container.on .main_wrap {
-  transition: all 0.5s cubic-bezier(0.57, 0.24, 0.5, 1.04);
+  transition: -webkit-clip-path 0.5s cubic-bezier(0.57, 0.24, 0.5, 1.04);
+  transition: clip-path 0.5s cubic-bezier(0.57, 0.24, 0.5, 1.04);
+  transition: clip-path 0.5s cubic-bezier(0.57, 0.24, 0.5, 1.04), -webkit-clip-path 0.5s cubic-bezier(0.57, 0.24, 0.5, 1.04);
   -webkit-clip-path: ellipse(0 50% at 0% 50%);
           clip-path: ellipse(0 50% at 0% 50%);
 }
