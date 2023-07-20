@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPACE ALPHA</title>
+    <link rel="stylesheet" href="../assets/css/common.min.css">
+    <script src="../assets/js/jquery-3.1.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/aa5544e91b.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> 
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <h1 class="logo">SPACE ALPHA</h1>
+            
+        </header>
+        <div id="container" class="container">
+            <nav id="nav" class="nav">
+                <ul class="nav_list">
+                    <li class="nav_item nav_item1"><a href="javascript:void(0)" class="nav_link" onclick="sub_load(1)"><span class="txt">our value</span><i class="fa-solid fa-heart"></i></a></li>
+                    <li class="nav_item nav_item2"><a href="javascript:void(0)" class="nav_link" onclick="sub_load(2)"><span class="txt">strong point</span><i class="fa-solid fa-thumbs-up"></i></a></li>
+                    <li class="nav_item nav_item3"><a href="javascript:void(0)" class="nav_link" onclick="sub_load(3)"><span class="txt">consulting</span><i class="fa-solid fa-person-chalkboard"></i></a></li>
+                    <li class="nav_item nav_item4"><a href="javascript:void(0)" class="nav_link" onclick="sub_load(4)"><span class="txt">training</span><i class="fa-solid fa-user-gear"></i></a></li>
+                    <li class="nav_item nav_item5"><a href="javascript:void(0)" class="nav_link" onclick="sub_load(5)"><span class="txt">humanities</span><i class="fa-solid fa-people-group"></i></a></li>
+                    <li class="nav_item nav_item6"><a href="javascript:void(0)" class="nav_link" onclick="sub_load(6)"><span class="txt">patent</span><i class="fa-solid fa-paste"></i></a></li>
+                    <li class="nav_item nav_item7"><a href="javascript:void(0)" class="nav_link" onclick="sub_load(7)"><span class="txt">partner</span><i class="fa-solid fa-handshake"></i></a></li>
+                    <li class="nav_item nav_item8"><a href="javascript:void(0)" class="nav_link" onclick="sub_load(8)"><span class="txt">Contact</span><i class="fa-solid fa-phone"></i></a></li>
+                </ul>
+            </nav>
+            <div class="main_wrap">
+                <div class="main_txt">
+                    SPACE ALPHA SPACE ALPHA SPACE ALPHA SPACE ALPHA SPACE ALPHA SPACE ALPHA SPACE ALPHA SPACE ALPHA SPACE ALPHA SPACE ALPHA SPACE ALPHA SPACE ALPHA SPACE ALPHA SPACE ALPHA SPACE ALPHA  SPACE ALPHA SPACE ALPHA SPACE ALPHA SPACE ALPHA SPACE ALPHA
+                </div>
+            </div>
+            <button class="btn_home" onclick=" main_load()"><i class="fa-solid fa-house"></i></button>
+            
+            <div class="sub_wrap">
+                <section class="sub_sec sub1">
+                    <div class="inner">
+                        <div class="sub_sec_inner">
+                            <div class="sec_tit">
+                                <h2>OUR VALUE</h2>
+                            </div>
+                            <div class="img_box">
+                                <img src="../assets/images/sub/sec1_1.png" alt="">
+                            </div>
+                            <div class="desc taC">
+                                <strong>사람의 스토리를 디자인 하다!!</strong>  <br><br>
+                                사람의 의미와 다양성을 고민합니다 고민의 본질에 가치을 찾아 이야기를 이해하고, 그 이야기를 살아 숨 쉬게 만드는 것 입니다. 
+                                그 이야기 속 경험과 가치의 본질를 같이 공유하며 혜안(慧眼)의 길을 함께 찾는 것이 우리의 “소명”입니다. <br><br>
+                                <b>스페이스 알파</b>는 <br> 사람의 문제에 본질의 가치를 찾아 다양한 컨설팅기법과 <br> 인문&교육을 접목시켜 새롭게 디자인하는 사업의 선구자가 되고자 합니다.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="sub_sec sub2">
+                    <div class="inner">
+                        <div class="sub_sec_inner">
+                            <div class="sec_tit">
+                                <h2>strong point</h2>
+                            </div>
+                            <ul class="sub2_list">
+                                <li class="sub2_list_item">
+                                    <div class="item_inner">
+                                        <div class="img_box">
+                                            <img src="https://picsum.photos/400/400" alt="">
+                                        </div>
+                                        <h3 class="tit">자체 개발 ROI기반 사람중심 성과지향 컨설팅 및 교육 보유</h3>
+                                        <div class="desc">
+                                            스페이스알파만의 ROI기반 교육 컨설팅을 통해 전략적 HRD를 실현할 수 있습니다
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="sub2_list_item">
+                                    <div class="item_inner">
+                                        <div class="img_box">
+                                            <img src="https://picsum.photos/400/400" alt="">
+                                        </div>
+                                        <h3 class="tit">HRD.M/인문학 전문인력 풀 보유</h3>
+                                        <div class="desc">
+                                            다양한 프로젝트에 따라 가장 적합한 인재풀을 선정 가장 효율적인 결과를 만들어 냅니다.
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="sub2_list_item">
+                                    <div class="item_inner">
+                                        <div class="img_box">
+                                            <div class="chart" id="piechart"></div>
+                                            <strong class="chart_txt">80%</strong>
+                                        </div>
+                                        <h3 class="tit">파트너십 관점의 프로젝트 기획 <br> (재 수주율 80%)</h3>
+                                        <div class="desc">
+                                            ROI 기반의 니즈분석에서 성과분석까지 성공적인 맞춤형 프로젝트를 통해 교육의 경우 90%, 컨설팅의 경우 70%의 재 수주율을 나타내고 있습니다.
+                                        </div>
+                                    </div>
+                                    <script>
+                                        google.charts.load('current', {
+                                            callback: function () {
+                                                //drawChart();
+                                                $(window).on('resize',drawChart);
+                                            },
+                                            packages:['corechart']
+                                        });
+
+                                        function drawChart() {
+                                            var pieData = new google.visualization.DataTable();
+                                            pieData.addColumn('string', 'Topping');
+                                            pieData.addColumn('number', '재 수주율(%)');   
+                                            pieData.addRows([
+                                                ['재 수주율', 80],
+                                                ['', 20 ],
+                                            ]);
+                                            var pieOptions = {
+                                                legend: 'none',
+                                                responsive: true,
+                                                //is3D: true,
+                                                pieHole: 0.4,
+                                                animation:{
+                                                    duration: 1000,
+                                                   // easing: 'out',
+                                                    startup: true
+                                                },
+                                                chartArea: {right:15,left:15,top:15,bottom:15},
+                                                //colors: ['#63c1fc','#fafafa'],
+                                                legend: 'none',
+                                                pieSliceText: 'none',
+                                                slices: {
+                                                    0: { color: '#63c1fc' },
+                                                    1: { color: 'transparent' }
+                                                },
+                                                legend: 'none'
+                                            };
+                                            var piechart = new google.visualization.PieChart(document.getElementById('piechart'));
+                                            piechart.draw(pieData, pieOptions);
+                                        }
+                                    </script>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section class="sub_sec sub3">
+                    <div class="inner">
+                        <div class="sub_sec_inner">
+                            <div class="sec_tit">
+                                <h2>consulting</h2>
+                            </div>
+                            <div class="sec_desc">
+                                <h3>스페이스알파 컨설팅</h3>
+                                <p>스페이스알파 컨설팅은 기존 컨설팅 폼에서 사람중심의 인문학.인류학.심리학.등 다양한 관점으로 문제의 본질을 이해하고 가장 근본적 해결방안을 제시합니다.</p>
+                            </div>
+                            <ul class="sec_list">
+                                <li class="sec_list_item">
+                                    <div class="item_inner">
+                                        <div class="ico_box">
+                                            <i class="fa-solid fa-person-chalkboard"></i>
+                                        </div>
+                                        <h3>HRD.M 컨설팅</h3>
+                                        <p>스페이스알파만의 진단 및 성과분석 프로세스를 통한 교육컨설팅</p>
+                                        <ul>
+                                            <li>교육체계 재 정립 컨설팅</li>
+                                            <li>교육니즈 분석 컨설팅</li>
+                                            <li>교육성과 분석 컨설팅</li>
+                                            <li>역량분석 및 직무분석 컨설팅</li>
+                                            <li>핵심가치 기반 인재육성 컨설팅</li>
+                                            <li>ESG기반 컨설팅</li>
+                                            <li>AI역량 및 육성을 위한 컨설팅</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="sec_list_item">
+                                    <div class="item_inner">
+                                        <div class="ico_box">
+                                            <i class="fa-solid fa-people-group"></i>
+                                        </div>
+                                        <h3>조직문화 컨설팅</h3>
+                                        <p>스페이스알파만의 다양한 분야의 전문가들이 조직의 숨견진 문화의 코드를 발견</p>
+                                        <ul>
+                                            <li>조직문화 재정립 컨설팅</li>
+                                            <li>조직의 문제해결 컨설팅</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="sec_list_item">
+                                    <div class="item_inner">
+                                        <div class="ico_box">
+                                            <i class="fa-solid fa-map-location-dot"></i>
+                                        </div>
+                                        <h3>지역활성화 컨설팅</h3>
+                                        <p>지역활성화를 위한 스토리기반 투어/축제 등 다양한 분야의 지역문제를 같이 고민</p>
+                                        <ul>
+                                            <li>지역스토리 기반 컨텐츠 개발</li>
+                                            <li>지역 문제해결을 위한 컨설팅</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section class="sub_sec sub4">
+                    <div class="inner">
+                        <div class="sub_sec_inner">
+                            <div class="sec_tit">
+                                <h2>training</h2>
+                            </div>
+                            <div class="sec_desc">
+                                <h3>스페이스알파 교육</h3>
+                                <p>사람중심의 성과지향 교육으로 스페이스알파 만의 교육니즈분석-맞춤형솔루션개발-ROI기반 성과분석 및 제언으로 연결 기업의 니즈를 분석 반영합니다. <br> 교육방향은 기존의 교육방식에 인문학을 접목하여 교육목적을 내재화할 수 있도록 프로그램을 지향하고 있습니다.</p>
+                            </div>
+                            <ul class="sec_list">
+                                <li class="sec_list_item">
+                                    <div class="item_inner">
+                                        <div class="img_box">
+                                            <img src="https://picsum.photos/400/200" alt="">
+                                        </div>
+                                        <h3>교육프로그램</h3>
+                                        <p>스페이스알파만의 사람중심 성과지향 컨설팅기반의 역량강화 교육</p>
+                                        <ul>
+                                            <li>리더십/신임/승진/계층/임원/퇴직 교육</li>
+                                            <li>기관이 원하는 맞춤형 교육 개발</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="sec_list_item">
+                                    <div class="item_inner">
+                                        <div class="img_box">
+                                            <img src="https://picsum.photos/400/200" alt="">
+                                        </div>
+                                        <h3>특화 프로그램</h3>
+                                        <p>스페이스알파만의 차별화된 기획 프로그램</p>
+                                        <ul>
+                                            <li>AI 기반 리더십 프로그램</li>
+                                            <li>ESG 교육프로그램</li>
+                                            <li>세대간 문제해결 맞춤 프로그램</li>
+                                            <li>인문학기반 교육프로그램</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="sec_list_item">
+                                    <div class="item_inner">
+                                        <div class="img_box">
+                                            <img src="https://picsum.photos/400/200" alt="">
+                                        </div>
+                                        <h3>조직활성화 프로그램</h3>
+                                        <p>조직의 문제를 완화하기 위한 조직활성화 프로그램</p>
+                                        <ul>
+                                            <li>융복합 조직활성화 프로그램</li>
+                                            <li>전통방식의 엑티비티 프로그램</li>
+                                            <li>인문학 기반 조직활성화 투어 프로그램</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section class="sub_sec sub5">
+                    <div class="inner">
+                        <div class="sub_sec_inner">
+                            <div class="sec_tit">
+                                <h2>humanities</h2>
+                            </div>
+                            <div class="sec_desc">
+                                <h3>스페이스알파 인문학 프로그램</h3>
+                                <p>스페이스알파의 인문학 프로그램은 교육에서 이벤트로 치부되는 한계를 넘어 교육의 성과를 내재화하는 교육의 중요한 부분으로 분야별 최고의 강 사와 두영역의 융복합 프로그램을 통해 깊이있는 인사이트와 힐링을 제공합니다.</p>
+                            </div>
+                            <ul class="sub5_list d_flex">
+                                <li class="sub5_list_item">
+                                    <div class="img_box">
+                                        <img src="https://picsum.photos/300/400" alt="">
+                                    </div>
+                                    <div class="txt_box">
+                                        <strong>인사이트로드</strong>  
+                                        <p>분야별 다양한 스토리텔러와 떠나는 <br> 100가지 이야기 코스</p> 
+                                    </div>
+                                </li>
+                                <li class="sub5_list_item">
+                                    <div class="img_box">
+                                        <img src="https://picsum.photos/300/400" alt="">
+                                    </div>
+                                    <div class="txt_box">
+                                        <strong>융복합 특강</strong>  
+                                        <p>서로다른 두 분야를 하나의 이야기로 기획</p> 
+                                    </div>
+                                </li>
+                                <li class="sub5_list_item">
+                                    <div class="img_box">
+                                        <img src="https://picsum.photos/300/400" alt="">
+                                    </div>
+                                    <div class="txt_box">
+                                        <strong>아트인</strong>  
+                                        <p>다양한 문화예술 체험을 우리회사에서 경험</p> 
+                                    </div>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </section>
+                <section class="sub_sec sub6">
+                    <div class="inner">
+                        <div class="sub_sec_inner">
+                            <div class="sec_tit">
+                                <h2>strong point</h2>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="sub_sec sub7">
+                    <div class="inner">
+                        <div class="sub_sec_inner">
+                            <div class="sec_tit">
+                                <h2>strong point</h2>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </section>
+                <section class="sub_sec sub8">
+                    <div class="inner">
+                        <div class="sub_sec_inner">
+                            <div class="sec_tit">
+                                <h2>strong point</h2>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <footer id="footer">
+
+        </footer>
+    </div>
+    <script>
+        const container = document.querySelector('.container');
+        const nav = document.querySelector('.nav');
+        const sub_wrap = document.querySelector('.sub_wrap');
+        const sub_sec = document.querySelectorAll('.sub_sec');
+        function sub_load(i){
+            container.classList.add('on');
+            nav.classList.add('on');
+            let idx = i;
+            sub_sec.forEach(function(item, index){
+                item.classList.remove('on');
+                //sub_wrap.classList.remove('sub_1', 'sub_2', 'sub_3', 'sub_4', 'sub_5', 'sub_6', 'sub_7', 'sub_8');
+                sub_wrap.classList.remove('sub_'+parseInt(index + 1)+'');
+                if (idx == index + 1){
+                    //console.log(item)
+                    item.classList.add('on');
+                    sub_wrap.classList.add('sub_'+parseInt(index + 1)+'')
+                }
+                if (idx == 2){
+                    google.charts.setOnLoadCallback(drawChart);
+                }
+            });
+        }
+        function main_load(){
+            container.classList.remove('on');
+            nav.classList.remove('on');
+        }
+
+
+    </script>
+</body>
+</html>
