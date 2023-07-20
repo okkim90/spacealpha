@@ -107,7 +107,26 @@ html, body, #wrap, #container {
         text-align: center;
         font-weight: bold;
         word-break: break-all;
-        color: #000;
+        
+
+        transform: translateX(-20%) rotate(-20deg);
+
+        div {
+            display: flex;
+            white-space: nowrap;
+            animation: marquee 10s infinite normal linear;
+            line-height: 0.9;
+            color: #222;
+            &:nth-child(odd) {
+                animation-direction: reverse;
+                color: #dcdcdc;
+            }
+        }
+    }
+    @keyframes marquee {
+        to {
+            transform: translateX(-100%);
+        }
     }
 }
 
