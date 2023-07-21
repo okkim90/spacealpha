@@ -2681,17 +2681,19 @@ html, body, #wrap, #container {
 
 .btn_home {
   position: absolute;
-  right: 20px;
-  top: 10px;
+  right: 0;
+  top: 0;
   font-size: 30px;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   z-index: 999;
   display: flex;
   align-items: center;
   justify-content: center;
   line-height: 0;
   color: #fff;
+  background-color: #444;
+  border-radius: 0 0 0 10px;
 }
 
 .sub_wrap {
@@ -2734,7 +2736,7 @@ html, body, #wrap, #container {
   height: 100%;
   overflow-y: auto;
   color: #000;
-  padding: 80px 50px 60px 100px;
+  padding: 60px 50px 60px 100px;
   box-sizing: border-box;
   transition: right 0.4s ease-in-out;
 }
@@ -2765,10 +2767,17 @@ html, body, #wrap, #container {
 .sub_wrap .sub_sec.sub8 {
   background-color: #6AAD3D;
 }
+.sub_wrap .sub_sec .inner {
+  display: flex;
+  align-items: center;
+  min-height: 100%;
+}
 .sub_wrap .sub_sec_inner {
+  width: 100%;
   padding: 30px 40px 50px;
   border-radius: 2em;
   background-color: #fff;
+  box-sizing: border-box;
 }
 .sub_wrap .sub_sec .sec_tit {
   text-align: center;
@@ -2929,7 +2938,7 @@ html, body, #wrap, #container {
 }
 
 .inner {
-  max-width: 1200px;
+  max-width: 1360px;
   margin: 0 auto;
 }
 
