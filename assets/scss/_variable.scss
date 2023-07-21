@@ -170,15 +170,18 @@ $inner: 1280px;
     }
 }
 @mixin list_col($col ,$gapX, $gapY){
-    .col_#{$col} {
+    
         gap: $gapY $gapX;
         .col_item {
             width: calc((100% / $col) - ((($col - 1)/$col)*$gapX));
         }
-    }
+    
 }
 @for $i from 1 through 10 {
-    @include list_col($i ,20px, 40px);
+    .col_#{$i} {
+        @include list_col($i ,20px, 40px);
+    }
+    
 } 
 
 .taC {
