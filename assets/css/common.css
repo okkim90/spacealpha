@@ -2817,7 +2817,7 @@ html, body, #wrap, #container {
   height: 100%;
   box-sizing: border-box;
   border-radius: 1.2em;
-  background-color: #e2eaf8;
+  background-color: #ebf0fa;
 }
 .sub_sec .sec_list_item .ico_box {
   width: 1.7em;
@@ -2988,10 +2988,14 @@ html, body, #wrap, #container {
 }
 .sub_sec.sub8 .d_flex {
   display: flex;
-  gap: 80px;
+  gap: 60px;
 }
 .sub_sec.sub8 .d_flex_sec {
   width: 50%;
+  box-sizing: border-box;
+  padding: 30px;
+  border-radius: 1em;
+  background-color: #f3f6fc;
 }
 .sub_sec.sub8 .history_item {
   display: flex;

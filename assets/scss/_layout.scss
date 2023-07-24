@@ -262,7 +262,7 @@ html, body, #wrap, #container {
                 height: 100%;
                 box-sizing: border-box;
                 border-radius: 1.2em;
-                background-color: lighten(map-get($colors, _key6), 55%)
+                background-color: lighten(map-get($colors, _key6), 57%)
             }
             .ico_box {
                 width: 1.7em;
@@ -454,12 +454,19 @@ html, body, #wrap, #container {
     &.sub8 {
         .d_flex {
             display: flex;
-            gap: 80px;
+            gap: 60px;
+            
             &_sec {
                 width: 50%;
+                box-sizing: border-box;
+                padding: 30px;
+                border-radius: 1em;
+                background-color: lighten(map-get($colors, _key6), 59%);
+                
             }
         }
         .history {
+            
             &_item {
                 display: flex;
                 line-height: 1.7;
@@ -474,6 +481,7 @@ html, body, #wrap, #container {
             }
         }
         .contact {
+            
             &_item {
                 & + .contact_item {
                     margin-top: 1em;
