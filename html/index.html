@@ -12,12 +12,17 @@
 </head>
 <body>
     <div id="wrap">
-        <header id="header">
-            <h1 class="logo">SPACE ALPHA</h1>
-            
-        </header>
+        <header id="header"></header>
         <div id="container" class="container">
+            <h1 class="logo">SPACE ALPHA</h1>
             <nav id="nav" class="nav">
+                <button type="button" class="nav_toggle">
+                    <div class="bar_box">
+                        <span class="bar_item bar_top"></span>
+                        <span class="bar_item bar_mid"></span>
+                        <span class="bar_item bar_bot"></span>
+                    </div>
+                </button>
                 <ul class="nav_list">
                     <li class="nav_item nav_item1"><a href="javascript:void(0)" class="nav_link" onclick="sub_load(1)"><span class="txt">our value</span><i class="fa-solid fa-heart"></i></a></li>
                     <li class="nav_item nav_item2"><a href="javascript:void(0)" class="nav_link" onclick="sub_load(2)"><span class="txt">strong point</span><i class="fa-solid fa-thumbs-up"></i></a></li>
@@ -75,10 +80,10 @@
                                 <img src="../assets/images/sub/sec1_1.png" alt="">
                             </div>
                             <div class="desc taC">
-                                <strong>사람의 스토리를 디자인 하다!!</strong>  <br><br>
-                                사람의 의미와 다양성을 고민합니다 고민의 본질에 가치을 찾아 이야기를 이해하고, 그 이야기를 살아 숨 쉬게 만드는 것 입니다. 
+                                <strong>"사람의 스토리를 디자인 하다!"</strong>  <br><br>
+                                사람의 의미와 다양성을 고민합니다 고민의 본질에 가치을 찾아 이야기를 이해하고, 그 이야기를 살아 숨 쉬게 만드는 것 입니다.  <br>
                                 그 이야기 속 경험과 가치의 본질를 같이 공유하며 혜안(慧眼)의 길을 함께 찾는 것이 우리의 “소명”입니다. <br><br>
-                                <b>스페이스 알파</b>는 <br> 사람의 문제에 본질의 가치를 찾아 다양한 컨설팅기법과 <br> 인문&교육을 접목시켜 새롭게 디자인하는 사업의 선구자가 되고자 합니다.
+                                <b>스페이스 알파</b>는 <br> 사람의 문제에 본질의 가치를 찾아 다양한 컨설팅기법과 <br class="pc_only"> 인문&교육을 접목시켜 새롭게 디자인하는 사업의 선구자가 되고자 합니다.
                             </div>
                         </div>
                     </div>
@@ -156,7 +161,7 @@
                                                    // easing: 'out',
                                                     startup: true
                                                 },
-                                                chartArea: {right:15,left:15,top:15,bottom:15},
+                                                chartArea: {right:10,left:10,top:10,bottom:10},
                                                 //colors: ['#63c1fc','#fafafa'],
                                                 legend: 'none',
                                                 pieSliceText: 'none',
@@ -350,7 +355,7 @@
                                 <h3>스페이스알파 특허/인증</h3>
                             </div>
                             <ul class="sec_list">
-                                <li class="sec_list_item">
+                                <li class="sec_list_item col_item">
                                     <div class="item_inner">
                                         <div class="img_box">
                                             <img src="../assets/images/sub/patent_sample.jpg" alt="">
@@ -358,7 +363,7 @@
                                         <h3>벤처인증</h3>
                                     </div>
                                 </li>
-                                <li class="sec_list_item">
+                                <li class="sec_list_item col_item">
                                     <div class="item_inner">
                                         <div class="img_box">
                                             <img src="../assets/images/sub/patent_sample.jpg" alt="">
@@ -366,7 +371,7 @@
                                         <h3>특허</h3>
                                     </div>
                                 </li>
-                                <li class="sec_list_item">
+                                <li class="sec_list_item col_item">
                                     <div class="item_inner">
                                         <div class="img_box">
                                             <img src="../assets/images/sub/patent_sample.jpg" alt="">
@@ -374,7 +379,7 @@
                                         <h3>특허</h3> 
                                     </div>
                                 </li>
-                                <li class="sec_list_item">
+                                <li class="sec_list_item col_item">
                                     <div class="item_inner">
                                         <div class="img_box">
                                             <img src="../assets/images/sub/patent_sample.jpg" alt="">
@@ -640,9 +645,7 @@
                 </section>
             </div>
         </div>
-        <footer id="footer">
-
-        </footer>
+        <footer id="footer"></footer>
     </div>
     <script>
         const container = document.querySelector('.container');
@@ -665,12 +668,26 @@
                 if (idx == 2){
                     google.charts.setOnLoadCallback(drawChart);
                 }
+                nav_close();
             });
         }
         function main_load(){
             container.classList.remove('on');
             nav.classList.remove('on');
+            nav_close();
         }
+
+        const nav_toggle = document.querySelector('.nav_toggle');
+        function nav_close(){
+            nav.classList.remove('active');
+        }
+        nav_toggle.addEventListener('click',function(){
+            if (nav.classList.contains('active')){
+                nav.classList.remove('active')
+            }else{
+                nav.classList.add('active')
+            }
+        });
 
 
     </script>

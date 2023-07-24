@@ -1,8 +1,20 @@
 
 .logo {
-    position: fixed;
-    right: 40px;
-    top: 40px;
+    position: absolute;
+    line-height: 66px;
+    width: 50%;
+    text-align: center;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    color: #fff;
+    text-shadow: 0 0 6px rgba(#000, .2);
+    font-size: 1.6em;
+    font-weight: bold;
+    @include mobile {
+        line-height: 40px;
+        font-size: 1.4em;
+    }
 }
 .nav {
     z-index: 99;
@@ -13,8 +25,67 @@
     height: 100%;
     //clip-path: circle(61.1% at 0 50%);
 
-    transition: left .5s cubic-bezier(.57,.24,.5,1.04);
-   
+    transition: all .5s cubic-bezier(.57,.24,.5,1.04);
+    transition-property: transform, left ;
+    &.active {
+        @include tablet {
+            transform: translateX(180px);
+        }
+    }
+    &_toggle {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background-color: #333;
+        border-radius: 0 0 10px 0;
+        left: 100%;
+        top: 0;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        @include tablet {
+            display: flex;
+           
+        }
+        .bar_box {
+            width: 20px;
+            height: 16px;
+            position: relative;
+            .bar_item {
+                position: absolute;
+                right: 0;
+                width: 100%;
+                height: 2px;
+                background-color: #fff;
+                transition: all .2s ease-in-out;
+                &.bar_top {
+                    top: 0;
+                }
+                &.bar_mid {
+                    top: 7px;
+                }
+                &.bar_bot {
+                    top: 14px;
+                }
+                
+            }
+            @at-root .nav.active & {
+                .bar_item {
+                    &.bar_top {
+                        top: 7px;
+                        transform: rotate(45deg);
+                    }
+                    &.bar_mid {
+                        width: 0;
+                    }
+                    &.bar_bot {
+                        top: 7px;
+                        transform: rotate(-45deg);
+                    }
+                } 
+            }
+        }
+    }
 
     &_list {
         display: flex;
@@ -54,6 +125,9 @@
             font-weight: bold;
             color: #fff;
             text-transform: uppercase;
+            @include tablet {
+                font-size: 14px;
+            }
         }
         i {
             width: 70px;
@@ -62,12 +136,21 @@
             justify-content: center;
             font-size: 3.2vh;
             color: #fff;
+            @include tablet {
+                width: 50px;
+                font-size: 16px;
+            }
         }
     }
 }
 
 html, body, #wrap, #container {
     height: 100%;
+}
+body {
+    @include tablet {
+        font-size: 12px;
+    }
 }
 #wrap {
     overflow-x: hidden;
@@ -143,11 +226,19 @@ html, body, #wrap, #container {
         }
         .nav {
             left: 70px;
-            transition: left .5s .5s cubic-bezier(.57,.24,.5,1.04);
+            transition: left .5s .5s cubic-bezier(.57,.24,.5,1.04), transform .5s cubic-bezier(.57,.24,.5,1.04);
+            
+            @include tablet{
+                left: 0;
+            }
             &_item:hover {
                 .nav_link {
-                   
                     transform: translateX(200px);
+                    @include tablet{
+                        transform: translateX(0); 
+                        box-shadow: none;
+                        clip-path: none;
+                    }
                 }
                 
             }
@@ -170,6 +261,11 @@ html, body, #wrap, #container {
     color: #fff;
     background-color: #444;
     border-radius: 0 0 0 10px;
+    @include tablet {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
 }
 
 .sub_wrap {
@@ -197,9 +293,16 @@ html, body, #wrap, #container {
     overflow-y: auto;
     
     color: #000;
-    padding: 60px 50px 60px 100px;
+    padding: 70px 50px 50px 100px;
     box-sizing: border-box;
     transition: right .4s ease-in-out;
+
+    @include tablet {
+        padding: 50px 30px 40px
+    }
+    @include mobile {
+        padding: 50px 15px 40px
+    }
     &.on {
         right: 0;
         
@@ -223,7 +326,12 @@ html, body, #wrap, #container {
         box-sizing: border-box;
         
         box-shadow: 0 0 2em rgba(#000, .1);
-        
+        @include tablet {
+            padding: 30px;
+        }
+        @include mobile {
+            padding: 0 15px 25px;
+        }
     }
     .sec_tit {
         text-align: center;
@@ -231,22 +339,39 @@ html, body, #wrap, #container {
             font-size: 3.4em;
             font-weight: bold;
             text-transform: uppercase;
+            @include mobile { 
+                font-size: 2em;
+            }
         }
         margin-bottom: 2em;
+        @include mobile { 
+            margin-bottom: 0;
+            padding: 15px 0 15px;
+            
+        }
     }
 
     .sec_desc {
         margin-bottom: 2em;
+        @include mobile {
+            margin-bottom: 1.6em;
+        }
         h3 {
             font-size: 1.6em;
             font-weight: bold;
             color: $c_key6;
+            @include mobile {
+                font-size: 1.4em;
+            }
         }
         p {
             font-size: 1.2em;
             font-weight: 500;
             margin-top: 0.8em;
             color: $c_solidGrey;
+            @include mobile {
+                font-size: 1.1em;
+            }
         }
     }
 
@@ -254,15 +379,29 @@ html, body, #wrap, #container {
         
         display: flex;
         gap: 30px;
+        @include tablet {
+            gap: 20px;
+        }
+        @include mobile {
+            display: block;
+        }
         &_item {
             flex: 1;
-            
+            @include mobile {
+                & + .sec_list_item {
+                    margin-top: 1.8em;
+                }
+            }
             .item_inner {
                 padding: 30px;
                 height: 100%;
                 box-sizing: border-box;
                 border-radius: 1.2em;
-                background-color: lighten(map-get($colors, _key6), 57%)
+                background-color: lighten(map-get($colors, _key6), 57%);
+                
+                @include tablet {
+                    padding: 20px;
+                }
             }
             .ico_box {
                 width: 1.7em;
@@ -279,20 +418,30 @@ html, body, #wrap, #container {
             }
             .img_box {
                 margin-bottom: 1.2em;
+                img {
+                    width: 100%;
+                }
                
             }
             h3 {
                 text-align: center;
                 font-size: 1.5em;
                 font-weight: bold;
+                @include mobile {
+                    font-size: 1.3em;
+                }
             }
             p {
                 font-size: 1.2em;
                 margin-top: 0.8em;
                 text-align: center;
+                @include mobile {
+                    font-size: 1.1em;
+                }
             }
             ul {
                 margin-top: 1.4em;
+                
                 li {
                     display: flex;
                     font-size: 1.1em;
@@ -310,33 +459,94 @@ html, body, #wrap, #container {
         .img_box {
             border-radius: 2em;
             overflow: hidden;
-            
+            @include mobile {
+                border-radius: 10px;
+            }
         }
         .desc {
             margin-top: 2em;
             font-size: 1.5em;
-            color: #555;
+            line-height: 1.7;
+            color: #222;
+            padding: 2em;
+            border-radius: 1em;
+            background-color: lighten(map-get($colors, _key1), 45%);
+            strong {
+                font-size: 1.5em;
+            }
+            @include mobile { 
+                padding: 25px 20px;
+                margin-top: 1.4em;
+                font-size: 1.2em;
+                strong {
+                    font-size: 1.4em;
+                }
+                .pc_only {
+                    display: none;
+                }
+            }
         }
     }
     &.sub2 {
         .sub2_list {
             display: flex;
             gap: 40px;
+            @include tablet {
+                gap: 20px;
+            }
+            @include mobile {
+                display: block;
+            }
             &_item {
                 flex: 1;
+                @include mobile { 
+                    & + .sub2_list_item {
+                        margin-top: 1.6em;
+                    }
+                }
+                .item_inner {
+                    border: 1px solid $c_line;
+                    border-radius: 1em;
+                    height: 100%;
+                    box-sizing: border-box;
+                    padding: 20px;
+                    @include mobile { 
+                        // display: flex;
+                        // flex-direction: column;
+
+                    }
+                }
                 .tit {
                     margin-top: 1em;
                     font-size: 1.4em;
                     font-weight: 500;
+                    @include mobile { 
+                        order: -1;
+                        width: 100%;
+                       
+                        margin-top: 1em;
+                    }
                 }
                 .desc {
                     margin-top: 0.8em;
                     font-size: 1.1em;
                     color: #555;
+                    @include mobile { 
+                        flex: 1;
+                        align-self: center;
+                        
+                        margin-top: 1em;
+                    }
                 }
                 .img_box {
-                    padding-top: 100%;
-                    position: relative;
+                    &_inner {
+                        padding-top: 100%;
+                        position: relative;
+                    }
+                    
+                  
+                    
+                    
                     img, .chart {
                         position: absolute;
                         width: 100%;
@@ -358,67 +568,126 @@ html, body, #wrap, #container {
                 }
             }
         }
-        .item_inner {
-            border: 1px solid $c_line;
-            border-radius: 1em;
-            height: 100%;
-            box-sizing: border-box;
-            padding: 20px;
-        }
+        
 
     }
-    &.sub3 {
-        
-       
-    }
+    
     &.sub5 {
         .sub5_list {
             display: flex;
+            @include mobile {
+                display: block;
+                
+            }
             &_item {
                 flex: 1;
                 padding: 0 20px;
                 text-align: center;
+                @include mobile {
+                    padding: 0;
+                    display: flex;
+                    & + .sub5_list_item {
+                        margin-top: 1em;
+                        padding-top: 1em;
+                        border-top: 1px dotted #ccc;
+                    }
+                }
                 .img_box {
                     max-width: 220px;
                     margin: 0 auto;
+                    @include mobile {
+                        width: 120px;
+                        margin: 0;
+                        flex-shrink: 0;
+                    }
                     img {
                         width: 100%;
                     }
                 }
                 .txt_box {
                     margin-top: 1em;
+                    @include mobile {
+                        margin-top: 0;
+                        text-align: left;
+                        align-self: center;
+                        padding-left: 1.5em;
+                    }
+                    
                     strong {
                         display: block;
                         font-size: 1.4em;
+                        @include mobile {
+                            font-size: 1.3em;
+                        }
                     }
                     p {
                         font-size: 1.2em;
                         margin-top: 0.4em;
                         color: $c_solidGrey;
+                        @include mobile {
+                            font-size: 1.1em;
+                            br {
+                                display: none;
+                            }
+                        }
                     }
                 }
             }
         }
         
     }
-
+    &.sub6 {
+        @include mobile {
+            .sec_list {
+                display: flex;
+                flex-wrap: wrap;
+                @include list_col(2 ,15px, 20px);
+                .col_item {
+                    flex: none;
+                    margin-top: 0;
+                    .item_inner {
+                        padding: 15px;
+                    }
+                }
+            }
+               
+        }
+       
+    }
     &.sub7 {
         .client_list {
             display: flex;
             flex-wrap: wrap;
             align-items: flex-start;
             @include list_col(3 ,20px, 40px);
+            @media (max-width: 1200px) {
+                @include list_col(2 ,20px, 40px);
+            }
+            @include mobile {
+                display: block;
+                .col_item {
+                    width: 100%;
+                }
+            }
             &_item {
                 display: flex;
-                
+                @include mobile { 
+                    & + .client_list_item {
+                        border-top: 1px dotted #ccc;
+                        margin-top: 1em;
+                        padding-top: 1em;
+                    }
+                }
                 .logo_box {
                     width: 140px;
                     margin-right: 15px;
                     flex-shrink: 0;
                     
-                    
+                    @include mobile {
+                        width: 100px;
+                    }
                     &_inner {
-                        padding-top: 50%;
+                        padding-top: 60%;
                         position: relative;
                         border: 1px solid #ddd;
                         border-radius: 6px;
@@ -454,15 +723,29 @@ html, body, #wrap, #container {
     &.sub8 {
         .d_flex {
             display: flex;
-            gap: 60px;
-            
+            gap: 50px;
+            @include tablet {
+                gap: 30px;
+            }
+            @include mobile {
+                display: block;
+            }
             &_sec {
                 width: 50%;
                 box-sizing: border-box;
                 padding: 30px;
                 border-radius: 1em;
                 background-color: lighten(map-get($colors, _key6), 59%);
-                
+                @include tablet {
+                    padding: 20px;
+                }
+                @include mobile {
+                    &.right {
+                        margin-top: 2.2em;
+                    }
+                    width: 100%;
+                }
+
             }
         }
         .history {
