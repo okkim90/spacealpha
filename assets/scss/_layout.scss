@@ -11,6 +11,11 @@
     text-shadow: 0 0 6px rgba(#000, .2);
     font-size: 1.6em;
     font-weight: bold;
+    font-family: 'Roboto';
+    @include tablet {
+        line-height: 50px;
+        font-size: 1.4em;
+    }
     @include mobile {
         line-height: 40px;
         font-size: 1.4em;
@@ -29,13 +34,13 @@
     transition-property: transform, left ;
     &.active {
         @include tablet {
-            transform: translateX(180px);
+            transform: translateX(30vh);
         }
     }
     &_toggle {
         position: absolute;
-        width: 40px;
-        height: 40px;
+        width: 50px;
+        height: 50px;
         background-color: #333;
         border-radius: 0 0 10px 0;
         left: 100%;
@@ -45,6 +50,11 @@
         justify-content: center;
         @include tablet {
             display: flex;
+           
+        }
+        @include mobile {
+            width: 40px;
+            height: 40px;
            
         }
         .bar_box {
@@ -125,8 +135,12 @@
             font-weight: bold;
             color: #fff;
             text-transform: uppercase;
+            font-family: 'Roboto';
             @include tablet {
-                font-size: 14px;
+                font-size: 2.1vh;
+            }
+            @include mobile {
+                font-size: 2.1vh;
             }
         }
         i {
@@ -137,9 +151,10 @@
             font-size: 3.2vh;
             color: #fff;
             @include tablet {
-                width: 50px;
-                font-size: 16px;
+                width: 7.5vh;
+                
             }
+            
         }
     }
 }
@@ -157,7 +172,7 @@ body {
 }
 .main_wrap {
     position: absolute;
-    width: 26%;
+    width: 25%;
     
     left: 0;
     top: 0;
@@ -182,13 +197,13 @@ body {
         
     // }
     .main_txt {
-        font-size: 7.5vw;
+        font-size: 8vw;
         line-height: 1;
         width: 100%;
         text-align: center;
         font-weight: bold;
         word-break: break-all;
-        
+        //font-family: 'Trade Winds';
 
         transform: translateX(-50%) rotate(-20deg);
 
@@ -196,8 +211,10 @@ body {
             display: flex;
             white-space: nowrap;
             animation: marquee 10s infinite normal linear;
-            line-height: 0.9;
+            line-height: 0.8;
             color: #222;
+            font-family: 'Roboto';
+            //text-transform: lowercase;
             &:nth-child(odd) {
                 animation-direction: reverse;
                 color: #dcdcdc;
@@ -206,7 +223,7 @@ body {
     }
     @keyframes marquee {
         to {
-            transform: translateX(-100%);
+            transform: translateX(-108%);
         }
     }
 }
@@ -262,9 +279,13 @@ body {
     background-color: #444;
     border-radius: 0 0 0 10px;
     @include tablet {
+        width: 50px;
+        height: 50px;
+        font-size: 16px;
+    }
+    @include mobile {
         width: 40px;
         height: 40px;
-        font-size: 16px;
     }
 }
 
@@ -298,7 +319,7 @@ body {
     transition: right .4s ease-in-out;
 
     @include tablet {
-        padding: 50px 30px 40px
+        padding: 60px 30px 40px
     }
     @include mobile {
         padding: 50px 15px 40px
@@ -339,6 +360,7 @@ body {
             font-size: 3.4em;
             font-weight: bold;
             text-transform: uppercase;
+            font-family: 'Roboto';
             @include mobile { 
                 font-size: 2em;
             }
@@ -418,6 +440,8 @@ body {
             }
             .img_box {
                 margin-bottom: 1.2em;
+                border-radius: 0.6em;
+                overflow: hidden;
                 img {
                     width: 100%;
                 }
@@ -490,7 +514,7 @@ body {
     &.sub2 {
         .sub2_list {
             display: flex;
-            gap: 40px;
+            gap: 30px;
             @include tablet {
                 gap: 20px;
             }
@@ -505,15 +529,16 @@ body {
                     }
                 }
                 .item_inner {
-                    border: 1px solid $c_line;
+                    
                     border-radius: 1em;
                     height: 100%;
                     box-sizing: border-box;
-                    padding: 20px;
-                    @include mobile { 
+                    padding: 30px;
+                    background-color: lighten(map-get($colors, _key6), 57%);
+                    @include tablet { 
                         // display: flex;
                         // flex-direction: column;
-
+                        padding: 20px;
                     }
                 }
                 .tit {
@@ -539,6 +564,9 @@ body {
                     }
                 }
                 .img_box {
+                    border-radius: 0.6em;
+                    overflow: hidden;
+
                     &_inner {
                         padding-top: 100%;
                         position: relative;
@@ -575,6 +603,7 @@ body {
     &.sub5 {
         .sub5_list {
             display: flex;
+            
             @include mobile {
                 display: block;
                 
@@ -582,6 +611,8 @@ body {
             &_item {
                 flex: 1;
                 padding: 0 20px;
+               
+
                 text-align: center;
                 @include mobile {
                     padding: 0;
@@ -593,12 +624,38 @@ body {
                     }
                 }
                 .img_box {
-                    max-width: 220px;
+                    max-width: 240px;
                     margin: 0 auto;
+                    border-radius: 0.6em;
+                    overflow: hidden;
+                    position: relative;
+                    border: 6px solid lighten(map-get($colors, _key5), 40%);
+                    &::before {
+                        content: 'PROGRAM';
+                        position: absolute;
+                        
+                        background-color: lighten(map-get($colors, _key5), 40%);
+                        color: #fff;
+                        font-size: 0.9em;
+                        font-weight: bold;
+                        line-height: 1.2;
+                        padding-right: 8px;
+                        padding-left: 2px;
+                        padding-bottom: 6px;
+                        left: 0;
+                        top: 0;
+                        border-radius: 0 0 0.6em 0;
+                        @include mobile {
+                            padding-right: 4px;
+                            padding-left: 0;
+                            padding-bottom: 4px;
+                        }
+                    }
                     @include mobile {
                         width: 120px;
                         margin: 0;
                         flex-shrink: 0;
+                        border-width: 4px;
                     }
                     img {
                         width: 100%;
@@ -682,16 +739,21 @@ body {
                     width: 140px;
                     margin-right: 15px;
                     flex-shrink: 0;
-                    
+                    padding: 10px;
+                    box-sizing: border-box;
+                    border: 1px solid #ddd;
+                    border-radius: 6px;
                     @include mobile {
                         width: 100px;
                     }
                     &_inner {
                         padding-top: 60%;
                         position: relative;
-                        border: 1px solid #ddd;
-                        border-radius: 6px;
+                        
+                        
                         overflow: hidden;
+                        
+                        
                         img {
                             position: absolute;
                             left: 0;
