@@ -36,37 +36,14 @@
             </nav>
             <div class="main_wrap">
                 <div class="main_txt">
-                    <div>SPACE ALPHA SPACE ALPHA SPACE ALPHA</div>
-                    <div>SPACE ALPHA SPACE ALPHA SPACE ALPHA</div>
-                    <div>SPACE ALPHA SPACE ALPHA SPACE ALPHA</div>
-                    <div>SPACE ALPHA SPACE ALPHA SPACE ALPHA</div>
-                    <div>SPACE ALPHA SPACE ALPHA SPACE ALPHA</div>
-                    <div>SPACE ALPHA SPACE ALPHA SPACE ALPHA</div>
-                    <div>SPACE ALPHA SPACE ALPHA SPACE ALPHA</div>
-                    <div>SPACE ALPHA SPACE ALPHA SPACE ALPHA</div>
-                    <div>SPACE ALPHA SPACE ALPHA SPACE ALPHA</div>
-                    <div>SPACE ALPHA SPACE ALPHA SPACE ALPHA</div>
-                    <div>SPACE ALPHA SPACE ALPHA SPACE ALPHA</div>
-                    <div>SPACE ALPHA SPACE ALPHA SPACE ALPHA</div>
-                    <div>SPACE ALPHA SPACE ALPHA SPACE ALPHA</div>
-                    <div>SPACE ALPHA SPACE ALPHA SPACE ALPHA</div>
-                    <div>SPACE ALPHA SPACE ALPHA SPACE ALPHA</div>
-                    <div>SPACE ALPHA SPACE ALPHA SPACE ALPHA</div>
-                    <div>SPACE ALPHA SPACE ALPHA SPACE ALPHA</div>
-                    <div>SPACE ALPHA SPACE ALPHA SPACE ALPHA</div>
-                    <div>SPACE ALPHA SPACE ALPHA SPACE ALPHA</div>
-                    <div>SPACE ALPHA SPACE ALPHA SPACE ALPHA</div>
-                    <div>SPACE ALPHA SPACE ALPHA SPACE ALPHA</div>
-                    <div>SPACE ALPHA SPACE ALPHA SPACE ALPHA</div>
-                    <div>SPACE ALPHA SPACE ALPHA SPACE ALPHA</div>
-                    <div>SPACE ALPHA SPACE ALPHA SPACE ALPHA</div>
-                    <div>SPACE ALPHA SPACE ALPHA SPACE ALPHA</div>
-                    <div>SPACE ALPHA SPACE ALPHA SPACE ALPHA</div>
-                    <div>SPACE ALPHA SPACE ALPHA SPACE ALPHA</div>
-                    <div>SPACE ALPHA SPACE ALPHA SPACE ALPHA</div>
-                    <div>SPACE ALPHA SPACE ALPHA SPACE ALPHA</div>
-                    <div>SPACE ALPHA SPACE ALPHA SPACE ALPHA</div>
-                    
+                    <script >
+                        const main_txt = document.querySelector('.main_txt');
+                        for(let i=0; i < 20; i++){
+                            let temp = document.createElement('div');
+                            temp.innerHTML = '<span>SPACE ALPHA&nbsp;</span><span>SPACE ALPHA&nbsp;</span><span>SPACE ALPHA&nbsp;</span><span>SPACE ALPHA&nbsp;</span>';
+                            main_txt.append(temp)
+                        }
+                    </script>
                 </div>
             </div>
             <button class="btn_home" onclick=" main_load()"><i class="fa-solid fa-house"></i></button>

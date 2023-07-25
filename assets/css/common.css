@@ -2823,29 +2823,35 @@ html, body, #wrap, #container {
   overflow: hidden;
 }
 .main_wrap .main_txt {
-  font-size: 8vw;
+  font-size: 10vw;
   line-height: 1;
   width: 100%;
   text-align: center;
   font-weight: bold;
   word-break: break-all;
   transform: translateX(-50%) rotate(-20deg);
+  transform-origin: center center;
 }
 .main_wrap .main_txt div {
   display: flex;
   white-space: nowrap;
-  animation: marquee 10s infinite normal linear;
+  width: 400%;
   line-height: 0.8;
   color: #222;
   font-family: "Roboto";
 }
-.main_wrap .main_txt div:nth-child(odd) {
+.main_wrap .main_txt div span {
+  width: 100%;
+  transform: translateX(0);
+  animation: marquee 10s infinite normal linear;
+}
+.main_wrap .main_txt div:nth-child(odd) span {
   animation-direction: reverse;
   color: #dcdcdc;
 }
 @keyframes marquee {
   to {
-    transform: translateX(-108%);
+    transform: translateX(-100%);
   }
 }
 
