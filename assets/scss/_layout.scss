@@ -1005,9 +1005,9 @@ body {
         font-weight: 500;
         @include mobile {
             text-align: center;
-            margin-top: 20px;
-            padding-top: 20px;
-            border-top: 1px solid #ccc;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px dotted #ccc;
         }
     }
 
