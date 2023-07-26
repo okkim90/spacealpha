@@ -337,15 +337,15 @@
                                 <li class="sec_list_item col_item">
                                     <div class="item_inner">
                                         <div class="img_box">
-                                            <img src="../assets/images/sub/patent_sample.jpg" alt="">
+                                            <img src="../assets/images/sub/patent1.png" alt="" onclick="f_popup_patent(this)" >
                                         </div>
-                                        <h3>벤처인증</h3>
+                                        <h3>특허결정서</h3>
                                     </div>
                                 </li>
                                 <li class="sec_list_item col_item">
                                     <div class="item_inner">
                                         <div class="img_box">
-                                            <img src="../assets/images/sub/patent_sample.jpg" alt="">
+                                            <img src="../assets/images/sub/patent2.png" alt="" onclick="f_popup_patent(this)">
                                         </div>
                                         <h3>특허</h3>
                                     </div>
@@ -353,22 +353,50 @@
                                 <li class="sec_list_item col_item">
                                     <div class="item_inner">
                                         <div class="img_box">
-                                            <img src="../assets/images/sub/patent_sample.jpg" alt="">
+                                            <img src="../assets/images/sub/patent3.png" alt="" onclick="f_popup_patent(this)">
                                         </div>
-                                        <h3>특허</h3> 
+                                        <h3>상표등록증</h3> 
                                     </div>
                                 </li>
                                 <li class="sec_list_item col_item">
                                     <div class="item_inner">
                                         <div class="img_box">
-                                            <img src="../assets/images/sub/patent_sample.jpg" alt="">
+                                            <img src="../assets/images/sub/patent4.png" alt="" onclick="f_popup_patent(this)">
                                         </div>
-                                        <h3>특허</h3> 
+                                        <h3>상표등록증</h3> 
+                                    </div>
+                                </li>
+                                <li class="sec_list_item col_item">
+                                    <div class="item_inner">
+                                        <div class="img_box">
+                                            <img src="../assets/images/sub/patent5.png" alt="" onclick="f_popup_patent(this)">
+                                        </div>
+                                        <h3>벤처기업확인서</h3> 
                                     </div>
                                 </li>
                             </ul>
                         </div>
                     </div>
+                    <div class="popup_patent" onclick="f_close_popup_patent()">
+                        <div class="popup_patent_inner">
+                            <button type="button" class="close_popup" onclick="f_close_popup_patent()"><span class="blind">팝업닫기</span></button>
+                            <img src="" alt="" class="popup_patent_img" onclick="event.stopPropagation()">
+                        </div>
+                    </div>
+                    <script async>
+                        const popup_patent = document.querySelector('.popup_patent');
+                        const popup_patent_img = document.querySelector('.popup_patent_img');
+                        
+                        function f_close_popup_patent(){
+                            popup_patent.classList.remove('on');
+                        }
+
+                        function f_popup_patent(e){
+                            let this_img = e.src;
+                            popup_patent_img.src = this_img;
+                            popup_patent.classList.add('on');
+                        }
+                    </script>
                 </section>
                 <section class="sub_sec sub7">
                     <div class="inner">
@@ -649,11 +677,14 @@
                 }
                 nav_close();
             });
+
+            f_close_popup_patent()
         }
         function main_load(){
             container.classList.remove('on');
             nav.classList.remove('on');
             nav_close();
+            f_close_popup_patent()
         }
 
         const nav_toggle = document.querySelector('.nav_toggle');

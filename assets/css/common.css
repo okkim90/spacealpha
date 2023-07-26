@@ -3314,12 +3314,12 @@ html, body, #wrap, #container {
   border-radius: 0.6em;
   overflow: hidden;
   position: relative;
-  border: 6px solid #ce84e0;
+  border: 6px solid #deadea;
 }
 .sub_sec.sub5 .sub5_list_item .img_box::before {
   content: "PROGRAM";
   position: absolute;
-  background-color: #ce84e0;
+  background-color: #deadea;
   color: #fff;
   font-size: 0.9em;
   font-weight: bold;
@@ -3382,11 +3382,66 @@ html, body, #wrap, #container {
     display: none;
   }
 }
+@media (max-width: 1024px) {
+  .sub_sec.sub6 .sec_list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 30px;
+  }
+  .sub_sec.sub6 .sec_list .col_item {
+    width: calc(33.3333333333% - 20px);
+  }
+}
+.sub_sec.sub6 .sec_list_item {
+  transition: transform 0.2s ease-in-out;
+}
+@media (max-width: 1024px) {
+  .sub_sec.sub6 .sec_list_item {
+    flex: none;
+  }
+}
+.sub_sec.sub6 .sec_list_item:hover {
+  transform: translateY(-1em);
+}
+.sub_sec.sub6 .sec_list_item .item_inner {
+  padding: 0;
+  background-color: #fff;
+}
+.sub_sec.sub6 .sec_list_item .item_inner .img_box {
+  border: 6px solid #264D9C;
+  box-shadow: 0 0 10px rgba(38, 77, 156, 0.5);
+  cursor: pointer;
+}
+.sub_sec.sub6 .popup_patent {
+  display: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.sub_sec.sub6 .popup_patent.on {
+  display: block;
+}
+.sub_sec.sub6 .popup_patent_inner {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  box-sizing: border-box;
+}
+.sub_sec.sub6 .popup_patent_inner img {
+  max-height: 100%;
+  max-width: 100%;
+}
 @media (max-width: 767px) {
   .sub_sec.sub6 .sec_list {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px 15px;
+    gap: 30px 15px;
   }
   .sub_sec.sub6 .sec_list .col_item {
     width: calc(50% - 7.5px);
@@ -3394,9 +3449,6 @@ html, body, #wrap, #container {
   .sub_sec.sub6 .sec_list .col_item {
     flex: none;
     margin-top: 0;
-  }
-  .sub_sec.sub6 .sec_list .col_item .item_inner {
-    padding: 15px;
   }
 }
 .sub_sec.sub7 .client_list {

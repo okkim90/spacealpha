@@ -638,12 +638,12 @@ body {
                     border-radius: 0.6em;
                     overflow: hidden;
                     position: relative;
-                    border: 6px solid lighten(map-get($colors, _key5), 40%);
+                    border: 6px solid lighten(map-get($colors, _key5), 50%);
                     &::before {
                         content: 'PROGRAM';
                         position: absolute;
                         
-                        background-color: lighten(map-get($colors, _key5), 40%);
+                        background-color: lighten(map-get($colors, _key5), 50%);
                         color: #fff;
                         font-size: 0.9em;
                         font-weight: bold;
@@ -703,17 +703,70 @@ body {
         
     }
     &.sub6 {
+        .sec_list {
+            
+            @include tablet {
+                display: flex;
+                flex-wrap: wrap;
+                @include list_col(3 ,30px, 40px);
+            }
+            &_item {
+                
+                @include tablet {
+                    flex: none;
+                }
+                transition: transform .2s ease-in-out;
+                &:hover {
+                    transform: translateY(-1em);
+                }
+                .item_inner {
+                    padding: 0;
+                    background-color: #fff;
+                    .img_box {
+                        border: 6px solid $c_key6;
+                        //border-radius: 0;
+                        box-shadow:   0 0 10px rgba($c_key6, .5);
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        
+        .popup_patent {
+            display: none;
+            position: fixed;
+            right: 0;
+            top: 0;
+            width: 50%;
+            height: 100%;
+            z-index: 9999;
+            background-color: rgba(0,0,0,.4);
+            
+            &.on {
+                display: block;
+            }
+            &_inner {
+                display: flex;
+                height: 100%;
+                align-items: center;
+                justify-content: center;
+                padding: 30px;
+                box-sizing: border-box;
+                img {
+                    max-height: 100%;
+                    max-width: 100%;
+                }
+            }
+        }
+
         @include mobile {
             .sec_list {
                 display: flex;
                 flex-wrap: wrap;
-                @include list_col(2 ,15px, 20px);
+                @include list_col(2 ,15px, 30px);
                 .col_item {
                     flex: none;
                     margin-top: 0;
-                    .item_inner {
-                        padding: 15px;
-                    }
                 }
             }
                
