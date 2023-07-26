@@ -1,7 +1,7 @@
 
 .logo {
     position: absolute;
-    line-height: 66px;
+    height: 66px;
     width: 50%;
     text-align: center;
     top: 0;
@@ -12,13 +12,25 @@
     font-size: 1.6em;
     font-weight: bold;
     font-family: 'Roboto';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+        height: 46px;
+    }
     @include tablet {
-        line-height: 50px;
+        height: 50px;
         font-size: 1.4em;
+        img {
+            height: 36px;
+        }
     }
     @include mobile {
-        line-height: 40px;
+        height: 40px;
         font-size: 1.4em;
+        img {
+            height: 30px;
+        }
     }
 }
 .nav {
@@ -347,6 +359,7 @@ body {
         display: flex;
         align-items: center;
         min-height: 100%;
+        flex-wrap: wrap;
     }
     &_inner {
         width: 100%;
@@ -361,6 +374,7 @@ body {
         }
         @include mobile {
             padding: 0 15px 25px;
+            border-radius: 1em;
         }
     }
     .sec_tit {
@@ -906,11 +920,26 @@ body {
                 }
             }
             .f_input {
-                font-size: 14px;
+                font-size: 1em;
                 width: 100%;
                 height: 2.5em;
                 border-radius: 6px;
                 padding: 0 10px;
+                @include mobile {
+                    padding: 0 0.6em;
+                }
+            }
+            .f_ta {
+                width: 100%;
+                height: 100px;
+                padding: 6px 10px;
+                box-sizing: border-box;
+                border: 1px solid #ccc;
+                border-radius: 6px;
+                font-size: 1em;
+                @include mobile {
+                    padding: 0.6em;
+                }
             }
             .f_btn {
                 width: 100px;
@@ -922,11 +951,80 @@ body {
             .btn_area {
                 text-align: center;
                 margin-top: 2em;
+                @include mobile { 
+                    margin-top: 20px;
+                }
             }
 
         }
     }
     
+}
+
+.footer {
+    margin-top: 4em;
+    background-color: #fff;
+    box-shadow: 0 0 2em rgba(0,0,0,.1);
+    width: 100%;
+    padding: 30px;
+    border-radius: 1em;
+    display: flex;
+    
+    &_logo {
+        width: 200px;
+        flex-shrink: 0;
+        margin-right: 50px;
+    }
+    &_info {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -18px;
+        margin-top: -4px;
+        &_wrap {
+            overflow: hidden;
+            align-self: center;
+        }
+        &_item {
+            display: flex;
+            align-items: center;
+            //line-height: 1.8;
+            margin-top: 4px;
+            &::before {
+                content: '';
+                width: 1px;
+                height: 1em;
+                background-color: #bbb;
+                margin: 0 9px;
+            }
+        }
+    }
+    .copy {
+        margin-top: 1em;
+        color: #666;
+        font-size: 0.9em;
+        font-weight: 500;
+        @include mobile {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #ccc;
+        }
+    }
+
+    @include mobile {
+        padding: 20px;
+        display: block;
+        @include mobile {
+            margin-top: 3em;
+        }
+        &_logo {
+            width: 140px;
+            margin: 0 auto;
+        }
+        &_info_wrap {
+            margin-top: 20px;
+        }
+    }
 }
 
 

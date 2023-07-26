@@ -12,9 +12,11 @@
 </head>
 <body>
     <div id="wrap">
-        <header id="header"></header>
         <div id="container" class="container">
-            <h1 class="logo">SPACE ALPHA</h1>
+            <h1 class="logo">
+                <span class="blind">스페이스알파</span>
+                <img src="../assets/images/common/logo.svg" alt="스페이스알파">
+            </h1>
             <nav id="nav" class="nav">
                 <button type="button" class="nav_toggle">
                     <div class="bar_box">
@@ -590,32 +592,28 @@
                                     <div class="contact">
                                         <form action="">
                                             <div class="contact_item">
-                                                <label for="" class="contact_item_tit">문의 아이템 <i class="fa-solid fa-star-of-life"></i></label>
-                                                <input type="text" class="f_input">
+                                                <label for="" class="contact_item_tit">회사명 <i class="fa-solid fa-star-of-life"></i></label>
+                                                <input type="text" class="f_input" placeholder="회사명을 입력 해주세요." required>
                                             </div>
                                             <div class="contact_item">
-                                                <label for="" class="contact_item_tit">문의 아이템 <i class="fa-solid fa-star-of-life"></i></label>
-                                                <input type="text" class="f_input">
+                                                <label for="" class="contact_item_tit">부서명 <i class="fa-solid fa-star-of-life"></i></label>
+                                                <input type="text" class="f_input" placeholder="부서명을 입력 해주세요." required>
                                             </div>
                                             <div class="contact_item">
-                                                <label for="" class="contact_item_tit">문의 아이템 <i class="fa-solid fa-star-of-life"></i></label>
-                                                <input type="text" class="f_input">
+                                                <label for="" class="contact_item_tit">담당자명 <i class="fa-solid fa-star-of-life"></i></label>
+                                                <input type="text" class="f_input" placeholder="담당자명을 입력 해주세요." required>
                                             </div>
                                             <div class="contact_item">
-                                                <label for="" class="contact_item_tit">문의 아이템 <i class="fa-solid fa-star-of-life"></i></label>
-                                                <input type="text" class="f_input">
+                                                <label for="" class="contact_item_tit">연락처 <i class="fa-solid fa-star-of-life"></i></label>
+                                                <input type="tel" class="f_input" placeholder="연락처를 입력 해주세요." required>
                                             </div>
                                             <div class="contact_item">
-                                                <label for="" class="contact_item_tit">문의 아이템 <i class="fa-solid fa-star-of-life"></i></label>
-                                                <input type="text" class="f_input">
+                                                <label for="" class="contact_item_tit">이메일 <i class="fa-solid fa-star-of-life"></i></label>
+                                                <input type="email" class="f_input" placeholder="이메일을 입력 해주세요." required>
                                             </div>
                                             <div class="contact_item">
-                                                <label for="" class="contact_item_tit">문의 아이템 <i class="fa-solid fa-star-of-life"></i></label>
-                                                <input type="text" class="f_input">
-                                            </div>
-                                            <div class="contact_item">
-                                                <label for="" class="contact_item_tit">문의 아이템 <i class="fa-solid fa-star-of-life"></i></label>
-                                                <input type="text" class="f_input">
+                                                <label for="" class="contact_item_tit">문의 내용 <i class="fa-solid fa-star-of-life"></i></label>
+                                                <textarea name="" id="" class="f_ta" required></textarea>
                                             </div>
                                             <div class="btn_area">
                                                 <input type="submit" value="문의하기" class="f_btn  _key6">
@@ -647,12 +645,31 @@
                                     </ul>
                                 </div>
                             </div>
-                        </div>                       
+                        </div>  
+                        <footer id="footer" class="footer">
+                            <div class="footer_logo">
+                                <img src="../assets/images/common/logo_footer.svg" alt="스페이스알파" class="">
+                            </div>
+                            
+                            <div class="footer_info_wrap">
+                                <ul class="footer_info">
+                                    <li class="footer_info_item">상호 : 스페이스알파</li>
+                                    <li class="footer_info_item">대표자 : 홍길동</li>
+                                    <li class="footer_info_item">사업자번호: 123-45-67890</li>
+                                    <!-- <li class="footer_info_item">주소 : 서울 특별시 강남구 영동대로 123</li> -->
+                                    <li class="footer_info_item">대표전화 : 02-1234-1234</li>
+                                    <li class="footer_info_item">팩스 : 02-1234-1234</li>
+                                    <li class="footer_info_item">이메일 : spacealpha@spacealpha.com</li>
+                                </ul>
+                                <p class="copy">Copyright @ 2023 SPACE ALPHA All Rights Reserved.</p>
+                            </div>
+                        </footer>                     
                     </div>
+                   
                 </section>
             </div>
         </div>
-        <footer id="footer"></footer>
+        
     </div>
     <script>
         const container = document.querySelector('.container');
