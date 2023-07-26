@@ -2809,6 +2809,11 @@ html, body, #wrap, #container {
 
 @media (max-width: 1024px) {
   body {
+    font-size: 13px;
+  }
+}
+@media (max-width: 767px) {
+  body {
     font-size: 12px;
   }
 }
@@ -3508,6 +3513,7 @@ html, body, #wrap, #container {
   box-sizing: border-box;
   border: 1px solid #ddd;
   border-radius: 6px;
+  align-self: flex-start;
 }
 @media (max-width: 767px) {
   .sub_sec.sub7 .client_list_item .logo_box {
@@ -3611,6 +3617,7 @@ html, body, #wrap, #container {
 @media (max-width: 767px) {
   .sub_sec.sub8 .contact .f_input {
     padding: 0 0.6em;
+    height: 3em;
   }
 }
 .sub_sec.sub8 .contact .f_ta {

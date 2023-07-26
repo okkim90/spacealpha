@@ -176,6 +176,9 @@ html, body, #wrap, #container {
 }
 body {
     @include tablet {
+        font-size: 13px;
+    }
+    @include mobile {
         font-size: 12px;
     }
 }
@@ -819,6 +822,7 @@ body {
                     box-sizing: border-box;
                     border: 1px solid #ddd;
                     border-radius: 6px;
+                    align-self: flex-start;
                     @include mobile {
                         width: 100px;
                     }
@@ -927,6 +931,7 @@ body {
                 padding: 0 10px;
                 @include mobile {
                     padding: 0 0.6em;
+                    height: 3em;
                 }
             }
             .f_ta {
