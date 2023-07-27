@@ -1901,7 +1901,6 @@ input::-webkit-search-results-decoration {
   justify-content: flex-end;
   transition-property: box-shadow, transform;
   transition: width 0.3s cubic-bezier(0.57, 0.24, 0.5, 1.04), background-color 0.2s ease-in-out;
-  border-radius: 0 10px 10px 0;
 }
 .nav_link .txt {
   font-size: 2vh;
@@ -2054,6 +2053,9 @@ html, body, #wrap, #container {
   .container.on .nav {
     left: 0;
   }
+}
+.container.on .nav_link {
+  border-radius: 0 10px 10px 0;
 }
 .container.on .nav_item:hover .nav_link {
   width: calc(100% + 200px);
