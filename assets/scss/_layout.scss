@@ -817,9 +817,9 @@ body {
             display: flex;
             flex-wrap: wrap;
             align-items: flex-start;
-            @include list_col(3 ,20px, 40px);
+            @include list_col(3 ,20px, 30px);
             @media (max-width: 1200px) {
-                @include list_col(2 ,20px, 40px);
+                @include list_col(2 ,20px, 20px);
             }
             @include mobile {
                 display: block;
@@ -842,7 +842,7 @@ body {
                     flex-shrink: 0;
                     padding: 10px;
                     box-sizing: border-box;
-                    border: 1px solid #ddd;
+                    border: 1px solid #ccc;
                     border-radius: 6px;
                     align-self: flex-start;
                     @include mobile {
