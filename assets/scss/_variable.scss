@@ -6,8 +6,8 @@ $breakpoint-pc_bm: 1800px;
 
 
 //Color
-$CBrand: #1f2085;
-$CLine: #d9d9d9;
+$CBrand: #D60036;
+
 
 
 
@@ -117,15 +117,14 @@ $c_solidGrey : map-get($colors, _solidGrey);
 
 //Font
 $font: 'Noto Sans KR', sans-serif;
-$font_tit: 'Montserrat';
-
-//innerBox
-$inner: 1280px;
+$font_tit: 'Roboto';
 
 
 
 
-@for $i from 1 through 100 {
+
+
+@for $i from 1 through 30 {
     $w : 10*$i;
     .w_#{$w} {
         width: #{$w}px
@@ -133,15 +132,15 @@ $inner: 1280px;
 }
 
 
-@for $i from 1 through 100 {
-    $w : 10*$i;
+@for $i from 1 through 30 {
+    $h : 10*$i;
     
-    .w_#{$w} {
-        width: #{$w}px
+    .h_#{$h} {
+        height: #{$h}px
     }
 }
 
-@for $i from 1 through 20 {
+@for $i from 1 through 10 {
     $z : 5*$i;
     .mt#{$z} {
         margin-top: #{$z}px;

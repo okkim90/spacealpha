@@ -200,16 +200,7 @@ input[type="number"]::-webkit-inner-spin-button {
     margin: 0;
 }
 
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="tel"]:focus,
-input[type="email"]:focus,
-input[type="search"]:focus,
-textarea:focus {
-   // border-color: $c_blue;
-    background-color: #fff;
-    outline: none;
-}
+
 
 input[readonly] {
     //pointer-events: none;
@@ -230,7 +221,18 @@ textarea {
     padding: 22px;
     resize: none;
     font-size: 14px;
-    border: 1px solid $CLine;
+    border: 1px solid $c_line;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+input[type="search"]:focus,
+textarea:focus {
+    border-color: $CBrand;
+    background-color: #fff;
+    outline: none;
 }
 
 button {

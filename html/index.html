@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SPACE ALPHA</title>
     <link rel="stylesheet" href="../assets/css/common.min.css">
-    <script src="../assets/js/jquery-3.1.1.min.js"></script>
+    <!-- <script src="../assets/js/jquery-3.1.1.min.js"></script> -->
     <script src="https://kit.fontawesome.com/aa5544e91b.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> 
 </head>
@@ -37,10 +37,13 @@
                 </ul>
             </nav>
             <div class="main_wrap">
+                <div class="main_logo">
+                    <img src="../assets/images/common/logo_main.svg" alt="">
+                </div>
                 <div class="main_txt">
                     <script >
                         const main_txt = document.querySelector('.main_txt');
-                        for(let i=0; i < 30; i++){
+                        for(let i=0; i < 16; i++){
                             let temp = document.createElement('div');
                             temp.innerHTML = '<span>SPACE ALPHA&nbsp;</span><span>SPACE ALPHA&nbsp;</span><span>SPACE ALPHA&nbsp;</span><span>SPACE ALPHA&nbsp;</span>';
                             main_txt.append(temp)
@@ -119,7 +122,9 @@
                                         google.charts.load('current', {
                                             callback: function () {
                                                 //drawChart();
-                                                $(window).on('resize',drawChart);
+                                                window.onresize = function(){
+                                                    drawChart()
+                                                }
                                             },
                                             packages:['corechart']
                                         });
