@@ -1977,11 +1977,11 @@ html, body, #wrap, #container {
   z-index: 10;
   text-align: center;
 }
-.main_wrap .main_logo img {
+.main_wrap .main_logo svg {
   width: 60%;
 }
 @media (max-width: 767px) {
-  .main_wrap .main_logo img {
+  .main_wrap .main_logo svg {
     width: 80%;
   }
 }
