@@ -2140,7 +2140,7 @@ html, body, #wrap, #container {
   height: 100%;
   overflow-y: auto;
   color: #000;
-  padding: 70px 50px 50px 100px;
+  padding: 80px 50px 50px 100px;
   box-sizing: border-box;
   transition: right 0.4s ease-in-out;
 }
@@ -2195,6 +2195,14 @@ html, body, #wrap, #container {
   box-sizing: border-box;
   box-shadow: 0 0 1.4em rgba(0, 0, 0, 0.1);
 }
+.sub_wrap.ty2 .sub_sec_inner {
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  color: #fff;
+}
+
 @media (max-width: 1024px) {
   .sub_sec_inner {
     padding: 30px;
@@ -2240,6 +2248,10 @@ html, body, #wrap, #container {
   font-weight: bold;
   color: #264D9C;
 }
+.sub_wrap.ty2 .sub_sec .sec_desc h3 {
+  color: #fff;
+}
+
 @media (max-width: 767px) {
   .sub_sec .sec_desc h3 {
     font-size: 1.4em;
@@ -2251,6 +2263,10 @@ html, body, #wrap, #container {
   margin-top: 0.8em;
   color: #414141;
 }
+.sub_wrap.ty2 .sub_sec .sec_desc p {
+  color: #fff;
+}
+
 @media (max-width: 767px) {
   .sub_sec .sec_desc p {
     font-size: 1.1em;
@@ -2316,6 +2332,7 @@ html, body, #wrap, #container {
   text-align: center;
   font-size: 1.5em;
   font-weight: bold;
+  color: #222;
 }
 @media (max-width: 767px) {
   .sub_sec .sec_list_item h3 {
@@ -2326,6 +2343,7 @@ html, body, #wrap, #container {
   font-size: 1.2em;
   margin-top: 0.8em;
   text-align: center;
+  color: #444;
 }
 @media (max-width: 767px) {
   .sub_sec .sec_list_item p {
@@ -2334,6 +2352,7 @@ html, body, #wrap, #container {
 }
 .sub_sec .sec_list_item ul {
   margin-top: 1.4em;
+  color: #444;
 }
 .sub_sec .sec_list_item ul li {
   display: flex;
@@ -2361,6 +2380,12 @@ html, body, #wrap, #container {
   border-radius: 1em;
   background-color: #fef5e1;
 }
+.sub_wrap.ty2 .sub_sec.sub1 .desc {
+  background-color: transparent;
+  padding: 0;
+  color: #fff;
+}
+
 .sub_sec.sub1 .desc strong {
   font-size: 1.5em;
 }
@@ -2406,6 +2431,11 @@ html, body, #wrap, #container {
   padding: 30px;
   background-color: #ebf0fa;
 }
+.sub_wrap.ty2 .sub_sec.sub2 .sub2_list_item .item_inner {
+  background-color: transparent;
+  padding: 0;
+}
+
 @media (max-width: 1024px) {
   .sub_sec.sub2 .sub2_list_item .item_inner {
     padding: 20px;
@@ -2416,6 +2446,10 @@ html, body, #wrap, #container {
   font-size: 1.4em;
   font-weight: 500;
 }
+.sub_wrap.ty2 .sub_sec.sub2 .sub2_list_item .tit {
+  color: #fff;
+}
+
 @media (max-width: 767px) {
   .sub_sec.sub2 .sub2_list_item .tit {
     order: -1;
@@ -2428,6 +2462,10 @@ html, body, #wrap, #container {
   font-size: 1.1em;
   color: #555;
 }
+.sub_wrap.ty2 .sub_sec.sub2 .sub2_list_item .desc {
+  color: #fff;
+}
+
 @media (max-width: 767px) {
   .sub_sec.sub2 .sub2_list_item .desc {
     flex: 1;
@@ -2462,6 +2500,10 @@ html, body, #wrap, #container {
   top: 50%;
   transform: translate(-50%, -50%);
 }
+.sub_wrap.ty2 .sub_sec.sub2 .sub2_list_item .img_box .chart_txt {
+  color: #222;
+}
+
 .sub_sec.sub5 .sub5_list {
   display: flex;
 }
@@ -2552,6 +2594,10 @@ html, body, #wrap, #container {
   margin-top: 0.4em;
   color: #414141;
 }
+.sub_wrap.ty2 .sub_sec.sub5 .sub5_list_item .txt_box p {
+  color: #fff;
+}
+
 @media (max-width: 767px) {
   .sub_sec.sub5 .sub5_list_item .txt_box p {
     font-size: 1.1em;
@@ -2585,6 +2631,16 @@ html, body, #wrap, #container {
   padding: 0;
   background-color: #fff;
 }
+.sub_wrap.ty2 .sub_sec.sub6 .sec_list_item .item_inner {
+  background-color: transparent;
+}
+.sub_wrap.ty2 .sub_sec.sub6 .sec_list_item .item_inner .img_box {
+  border: none;
+}
+.sub_wrap.ty2 .sub_sec.sub6 .sec_list_item .item_inner h3 {
+  color: #fff;
+}
+
 .sub_sec.sub6 .sec_list_item .item_inner .img_box {
   border: 6px solid #264D9C;
   box-shadow: 0 0 10px rgba(38, 77, 156, 0.5);
@@ -2674,6 +2730,10 @@ html, body, #wrap, #container {
   border-radius: 6px;
   align-self: flex-start;
 }
+.sub_wrap.ty2 .sub_sec.sub7 .client_list_item .logo_box {
+  background-color: #fff;
+}
+
 @media (max-width: 767px) {
   .sub_sec.sub7 .client_list_item .logo_box {
     width: 100px;
@@ -2728,6 +2788,11 @@ html, body, #wrap, #container {
   border-radius: 1em;
   background-color: #f3f6fc;
 }
+.sub_wrap.ty2 .sub_sec.sub8 .d_flex_sec {
+  background-color: transparent;
+  padding: 0;
+}
+
 @media (max-width: 1024px) {
   .sub_sec.sub8 .d_flex_sec {
     padding: 20px;
