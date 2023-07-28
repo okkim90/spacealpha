@@ -2301,6 +2301,10 @@ html, body, #wrap, #container {
   border-radius: 1.2em;
   background-color: #ebf0fa;
 }
+.sub_wrap.ty2 .sub_sec .sec_list_item .item_inner {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
 @media (max-width: 1024px) {
   .sub_sec .sec_list_item .item_inner {
     padding: 20px;
@@ -2334,6 +2338,10 @@ html, body, #wrap, #container {
   font-weight: bold;
   color: #222;
 }
+.sub_wrap.ty2 .sub_sec .sec_list_item h3 {
+  color: #fff;
+}
+
 @media (max-width: 767px) {
   .sub_sec .sec_list_item h3 {
     font-size: 1.3em;
@@ -2345,6 +2353,10 @@ html, body, #wrap, #container {
   text-align: center;
   color: #444;
 }
+.sub_wrap.ty2 .sub_sec .sec_list_item p {
+  color: #fff;
+}
+
 @media (max-width: 767px) {
   .sub_sec .sec_list_item p {
     font-size: 1.1em;
@@ -2354,6 +2366,10 @@ html, body, #wrap, #container {
   margin-top: 1.4em;
   color: #444;
 }
+.sub_wrap.ty2 .sub_sec .sec_list_item ul {
+  color: #fff;
+}
+
 .sub_sec .sec_list_item ul li {
   display: flex;
   font-size: 1.1em;
@@ -2384,6 +2400,7 @@ html, body, #wrap, #container {
   background-color: transparent;
   padding: 0;
   color: #fff;
+  padding-bottom: 2em;
 }
 
 .sub_sec.sub1 .desc strong {
@@ -2406,6 +2423,10 @@ html, body, #wrap, #container {
   display: flex;
   gap: 30px;
 }
+.sub_wrap.ty2 .sub_sec.sub2 .sub2_list {
+  gap: 40px;
+}
+
 @media (max-width: 1024px) {
   .sub_sec.sub2 .sub2_list {
     gap: 20px;
@@ -2422,6 +2443,9 @@ html, body, #wrap, #container {
 @media (max-width: 767px) {
   .sub_sec.sub2 .sub2_list_item + .sub2_list_item {
     margin-top: 1.6em;
+  }
+  .sub_wrap.ty2 .sub_sec.sub2 .sub2_list_item + .sub2_list_item {
+    margin-top: 3em;
   }
 }
 .sub_sec.sub2 .sub2_list_item .item_inner {
@@ -2526,6 +2550,9 @@ html, body, #wrap, #container {
     margin-top: 1em;
     padding-top: 1em;
     border-top: 1px dotted #ccc;
+  }
+  .sub_wrap.ty2 .sub_sec.sub5 .sub5_list_item + .sub5_list_item {
+    border-top-color: #fff;
   }
 }
 .sub_sec.sub5 .sub5_list_item .img_box {
@@ -2718,6 +2745,9 @@ html, body, #wrap, #container {
     border-top: 1px dotted #ccc;
     margin-top: 1em;
     padding-top: 1em;
+  }
+  .sub_wrap.ty2 .sub_sec.sub7 .client_list_item + .client_list_item {
+    border-top-color: #fff;
   }
 }
 .sub_sec.sub7 .client_list_item .logo_box {
