@@ -1982,7 +1982,7 @@ html, body, #wrap, #container {
 
 .main_wrap {
   position: absolute;
-  width: 25%;
+  width: 27%;
   left: 0;
   top: 0;
   z-index: 100;
@@ -1996,6 +1996,11 @@ html, body, #wrap, #container {
   -webkit-clip-path: ellipse(100% 80% at 0% 50%);
           clip-path: ellipse(100% 80% at 0% 50%);
   overflow: hidden;
+}
+@media (max-width: 767px) {
+  .main_wrap {
+    width: 25%;
+  }
 }
 .main_wrap .main_logo {
   position: absolute;
