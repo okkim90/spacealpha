@@ -156,7 +156,7 @@
             color: #fff;
             text-transform: uppercase;
             font-family: 'Tmonsori';
-            letter-spacing: 0em;
+            letter-spacing: 0.01em;
             margin-top: 0.2em;
             @include tablet {
                 font-size: 2.1vh;
@@ -173,7 +173,7 @@
             font-size: 3.2vh;
             color: #fff;
             @include tablet {
-                width: 7.5vh;
+                width: 7vh;
                 
             }
             

@@ -1934,7 +1934,7 @@ input::-webkit-search-results-decoration {
   color: #fff;
   text-transform: uppercase;
   font-family: "Tmonsori";
-  letter-spacing: 0em;
+  letter-spacing: 0.01em;
   margin-top: 0.2em;
 }
 @media (max-width: 1024px) {
@@ -1957,7 +1957,7 @@ input::-webkit-search-results-decoration {
 }
 @media (max-width: 1024px) {
   .nav_link i {
-    width: 7.5vh;
+    width: 7vh;
   }
 }
 
