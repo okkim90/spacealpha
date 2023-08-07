@@ -46,7 +46,13 @@
     transition-property: transform, left ;
     &.active {
         @include tablet {
-            transform: translateX(30vh);
+            @media (orientation: portrait) {
+                transform: translateX(30vh);
+            }
+            @media (orientation: landscape) {
+                transform: translateX(40vh);
+            }
+            
         }
     }
     &_toggle {
@@ -149,7 +155,9 @@
             font-weight: bold;
             color: #fff;
             text-transform: uppercase;
-            font-family: 'Roboto';
+            font-family: 'Tmonsori';
+            letter-spacing: 0em;
+            margin-top: 0.2em;
             @include tablet {
                 font-size: 2.1vh;
             }
@@ -226,11 +234,19 @@ body {
         .txt_box {
             font-size: 3vw;
             margin-top: 0.3em;
-            font-weight: bold;
-            letter-spacing: -0.06em;
+            font-weight: 300;
+            letter-spacing: 0.18em;
+            font-family: 'NanumSquare';
             //font-family: 'Tmonsori';
+            br {
+                display: none;
+            }
             @include mobile {
-                font-size: 4vw;
+                font-size: 6vw;
+                margin-top: 0.5em;
+                br {
+                    display: block;
+                }
             }
         }
         svg {
@@ -263,7 +279,7 @@ body {
             width: 400%;
             line-height: 0.8;
             color: rgba(#000, .05);
-            font-family: 'Roboto';
+            font-family: 'Tmonsori';
             //text-transform: lowercase;
             span {
                 width: 100%;
@@ -432,7 +448,9 @@ body {
             font-size: 3.4em;
             font-weight: bold;
             text-transform: uppercase;
-            font-family: 'Roboto';
+            font-family: "Tmonsori";
+            letter-spacing: 0.15em;
+            text-shadow: 0 4px 8px rgba(0,0,0,.15);
             @include mobile { 
                 font-size: 2.6em;
             }
@@ -451,14 +469,14 @@ body {
             margin-bottom: 1.6em;
         }
         h3 {
-            font-size: 1.8em;
+            font-size: 2em;
             font-weight: bold;
             color: $c_key6;
             @at-root .sub_wrap.ty2 & {
                 color: #fff;
             }
             @include mobile {
-                font-size: 1.4em;
+                font-size: 1.6em;
             }
         }
         p {
@@ -500,7 +518,7 @@ body {
                 border-radius: 1.2em;
                 background-color: lighten(map-get($colors, _key6), 57%);
                 @at-root .sub_wrap.ty2 & {  
-                    background-color: rgba(#000,.1);
+                    background-color: rgba(#000,.2);
                 }
                 @include tablet {
                     padding: 20px;
@@ -535,7 +553,7 @@ body {
                 font-weight: bold;
                 color: #222;
                 @at-root .sub_wrap.ty2 & { 
-                    color: #fff;
+                    color: #ffcf5e;
                 }
                 @include mobile {
                     font-size: 1.3em;
@@ -550,7 +568,7 @@ body {
                     color: #fff;
                 }
                 @include mobile {
-                    font-size: 1.1em;
+                    font-size: 1.2em;
                 }
             }
             ul {
@@ -576,6 +594,7 @@ body {
         .img_box {
             border-radius: 2em;
             overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,.2);
             @include mobile {
                 border-radius: 10px;
             }
@@ -593,9 +612,9 @@ body {
                 background-color: transparent;
                 padding: 0;
                 color: #fff;
-                text-shadow: 0 0 0.2em rgba(#000, .2);
-                padding: 1.6em;
-                background-color: rgba(#fff,.1);
+                box-shadow: 0 4px 10px rgba(0,0,0,.2);
+                padding: 2.5em 1.6em;
+                background-color: rgba(#000,.1);
             }
             
             strong {
@@ -623,7 +642,7 @@ body {
             display: flex;
             gap: 30px;
             @at-root .sub_wrap.ty2 & {
-                gap: 40px;
+                gap: 50px;
             }
             @include tablet {
                 gap: 20px;
@@ -670,7 +689,7 @@ body {
                     flex: 1;
                     @at-root .sub_wrap.ty2 & { 
                         text-align: center;
-                        padding: 0 1.6em;
+                        padding: 0;
                         margin-top: 1em;
                         background-color: transparent;
                     }
@@ -709,7 +728,7 @@ body {
                     overflow: hidden;
                     @at-root .sub_wrap.ty2 & {
                         border-radius: 2em;
-                        border: 4px solid #fff;
+                        border: 0.6em solid #fff;
                     }
                     &_inner {
                         padding-top: 100%;
@@ -753,7 +772,7 @@ body {
                 display: flex;
                 align-items: flex-start;
                 padding: 2em;
-                background-color: rgba(#000, .1);
+                background-color: rgba(#000, .2);
                 border-radius: 1em;
 
                 @include mobile {
@@ -924,6 +943,7 @@ body {
         @at-root .sub_wrap.ty2 & { 
             .sec_list {
                 &_item {
+                    
                     h3 {
                         font-size: 2em;
                         color: lighten($c_key1, 20%);

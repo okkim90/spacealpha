@@ -1406,6 +1406,20 @@
   font-weight: normal;
   src: url("../fonts/tmonmonsori.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
+@font-face {
+  font-display: swap;
+  font-family: "NanumSquare";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/NanumSquareR.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "NanumSquare";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/NanumSquareL.woff2") format("woff2");
+}
 * {
   margin: 0;
   padding: 0;
@@ -1718,9 +1732,14 @@ input::-webkit-search-results-decoration {
   transition: all 0.5s cubic-bezier(0.57, 0.24, 0.5, 1.04);
   transition-property: transform, left;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1024px) and (orientation: portrait) {
   .nav.active {
     transform: translateX(30vh);
+  }
+}
+@media (max-width: 1024px) and (orientation: landscape) {
+  .nav.active {
+    transform: translateX(40vh);
   }
 }
 .nav_toggle {
@@ -1914,7 +1933,9 @@ input::-webkit-search-results-decoration {
   font-weight: bold;
   color: #fff;
   text-transform: uppercase;
-  font-family: "Roboto";
+  font-family: "Tmonsori";
+  letter-spacing: 0em;
+  margin-top: 0.2em;
 }
 @media (max-width: 1024px) {
   .nav_link .txt {
@@ -1990,12 +2011,20 @@ html, body, #wrap, #container {
 .main_wrap .main_logo .txt_box {
   font-size: 3vw;
   margin-top: 0.3em;
-  font-weight: bold;
-  letter-spacing: -0.06em;
+  font-weight: 300;
+  letter-spacing: 0.18em;
+  font-family: "NanumSquare";
+}
+.main_wrap .main_logo .txt_box br {
+  display: none;
 }
 @media (max-width: 767px) {
   .main_wrap .main_logo .txt_box {
-    font-size: 4vw;
+    font-size: 6vw;
+    margin-top: 0.5em;
+  }
+  .main_wrap .main_logo .txt_box br {
+    display: block;
   }
 }
 .main_wrap .main_logo svg {
@@ -2031,7 +2060,7 @@ html, body, #wrap, #container {
   width: 400%;
   line-height: 0.8;
   color: rgba(0, 0, 0, 0.05);
-  font-family: "Roboto";
+  font-family: "Tmonsori";
 }
 .main_wrap .main_txt div span {
   width: 100%;
@@ -2243,7 +2272,9 @@ html, body, #wrap, #container {
   font-size: 3.4em;
   font-weight: bold;
   text-transform: uppercase;
-  font-family: "Roboto";
+  font-family: "Tmonsori";
+  letter-spacing: 0.15em;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 @media (max-width: 767px) {
   .sub_sec .sec_tit h2 {
@@ -2265,7 +2296,7 @@ html, body, #wrap, #container {
   }
 }
 .sub_sec .sec_desc h3 {
-  font-size: 1.8em;
+  font-size: 2em;
   font-weight: bold;
   color: #264D9C;
 }
@@ -2275,7 +2306,7 @@ html, body, #wrap, #container {
 
 @media (max-width: 767px) {
   .sub_sec .sec_desc h3 {
-    font-size: 1.4em;
+    font-size: 1.6em;
   }
 }
 .sub_sec .sec_desc p {
@@ -2324,7 +2355,7 @@ html, body, #wrap, #container {
   background-color: #ebf0fa;
 }
 .sub_wrap.ty2 .sub_sec .sec_list_item .item_inner {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 1024px) {
@@ -2361,7 +2392,7 @@ html, body, #wrap, #container {
   color: #222;
 }
 .sub_wrap.ty2 .sub_sec .sec_list_item h3 {
-  color: #fff;
+  color: #ffcf5e;
 }
 
 @media (max-width: 767px) {
@@ -2381,7 +2412,7 @@ html, body, #wrap, #container {
 
 @media (max-width: 767px) {
   .sub_sec .sec_list_item p {
-    font-size: 1.1em;
+    font-size: 1.2em;
   }
 }
 .sub_sec .sec_list_item ul {
@@ -2403,6 +2434,7 @@ html, body, #wrap, #container {
 .sub_sec.sub1 .img_box {
   border-radius: 2em;
   overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 @media (max-width: 767px) {
   .sub_sec.sub1 .img_box {
@@ -2422,9 +2454,9 @@ html, body, #wrap, #container {
   background-color: transparent;
   padding: 0;
   color: #fff;
-  text-shadow: 0 0 0.2em rgba(0, 0, 0, 0.2);
-  padding: 1.6em;
-  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 2.5em 1.6em;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .sub_sec.sub1 .desc strong {
@@ -2452,7 +2484,7 @@ html, body, #wrap, #container {
   gap: 30px;
 }
 .sub_wrap.ty2 .sub_sec.sub2 .sub2_list {
-  gap: 40px;
+  gap: 50px;
 }
 
 @media (max-width: 1024px) {
@@ -2504,7 +2536,7 @@ html, body, #wrap, #container {
 }
 .sub_wrap.ty2 .sub_sec.sub2 .sub2_list_item .txt_box {
   text-align: center;
-  padding: 0 1.6em;
+  padding: 0;
   margin-top: 1em;
   background-color: transparent;
 }
@@ -2548,7 +2580,7 @@ html, body, #wrap, #container {
 }
 .sub_wrap.ty2 .sub_sec.sub2 .sub2_list_item .img_box {
   border-radius: 2em;
-  border: 4px solid #fff;
+  border: 0.6em solid #fff;
 }
 
 .sub_sec.sub2 .sub2_list_item .img_box_inner {
@@ -2582,7 +2614,7 @@ html, body, #wrap, #container {
   display: flex;
   align-items: flex-start;
   padding: 2em;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.2);
   border-radius: 1em;
 }
 @media (max-width: 767px) {
