@@ -3043,7 +3043,7 @@ html, body, #wrap, #container {
   flex-shrink: 0;
 }
 .sub_sec.sub8 .contact_wrap {
-  max-width: 600px;
+  max-width: 540px;
   margin: 0 auto;
   width: 100%;
   padding: 2em;
@@ -3095,7 +3095,7 @@ html, body, #wrap, #container {
 }
 .sub_sec.sub8 .contact .f_ta {
   width: 100%;
-  height: 100px;
+  height: 120px;
   padding: 10px 10px;
   box-sizing: border-box;
   border-radius: 6px;
@@ -3107,7 +3107,7 @@ html, body, #wrap, #container {
   }
 }
 .sub_sec.sub8 .contact .f_btn {
-  width: 8em;
+  width: 100%;
   height: 2.5em;
   font-size: 1.1em;
   font-weight: 500;
