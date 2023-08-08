@@ -1939,16 +1939,11 @@ input::-webkit-search-results-decoration {
 }
 @media (max-width: 1024px) {
   .nav_link .txt {
-    font-size: 2.1vh;
-  }
-}
-@media (max-width: 767px) {
-  .nav_link .txt {
-    font-size: 2.1vh;
+    font-size: 1.9vh;
   }
 }
 .nav_link i {
-  width: 70px;
+  width: 8vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2101,7 +2096,7 @@ html, body, #wrap, #container {
           clip-path: ellipse(0 50% at 0% 50%);
 }
 .container.on .nav {
-  left: 70px;
+  left: 8vh;
   transition: left 0.5s 0.5s cubic-bezier(0.57, 0.24, 0.5, 1.04), transform 0.5s cubic-bezier(0.57, 0.24, 0.5, 1.04);
 }
 @media (max-width: 1024px) {
@@ -2113,7 +2108,7 @@ html, body, #wrap, #container {
   border-radius: 0 10px 10px 0;
 }
 .container.on .nav_item:hover .nav_link {
-  width: calc(100% + 200px);
+  width: calc(100% + 20vh);
 }
 @media (max-width: 1024px) {
   .container.on .nav_item:hover .nav_link {

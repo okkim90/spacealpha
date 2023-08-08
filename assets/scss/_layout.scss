@@ -159,22 +159,20 @@
             letter-spacing: 0.01em;
             margin-top: 0.2em;
             @include tablet {
-                font-size: 2.1vh;
+                font-size: 1.9vh;
             }
-            @include mobile {
-                font-size: 2.1vh;
-            }
+            
+            
         }
         i {
-            width: 70px;
+            width: 8vh;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 3.2vh;
             color: #fff;
             @include tablet {
-                width: 7vh;
-                
+               width: 7vh;
             }
             
         }
@@ -320,7 +318,7 @@ body {
             clip-path: ellipse(0 50% at 0% 50%);
         }
         .nav {
-            left: 70px;
+            left: 8vh;
             transition: left .5s .5s cubic-bezier(.57,.24,.5,1.04), transform .5s cubic-bezier(.57,.24,.5,1.04);
             
             @include tablet{
@@ -331,7 +329,7 @@ body {
             }
             &_item:hover {
                 .nav_link {
-                    width: calc(100% + 200px);
+                    width: calc(100% + 20vh);
                     
                     @include tablet{
                         width: 100%;; 
