@@ -296,26 +296,26 @@
 }
 
 .fc_key8 {
-  color: #3fa942;
+  color: #65AD5A;
 }
 
 .bg_key8 {
-  background-color: #3fa942;
+  background-color: #65AD5A;
 }
 
 .bd_key8 {
-  border-color: #3fa942;
+  border-color: #65AD5A;
 }
 
 .f_btn._key8 {
   transition: all 0.1s ease-in-out;
-  background-color: #3fa942;
-  border-color: #3fa942;
+  background-color: #65AD5A;
+  border-color: #65AD5A;
   color: #fff;
 }
 .f_btn._key8:hover {
-  background-color: #348b36;
-  border-color: #348b36;
+  background-color: #54944a;
+  border-color: #54944a;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
 }
 .f_btn._key8:active {
@@ -325,11 +325,11 @@
 .f_btn._key8_ol {
   transition: all 0.1s ease-in-out;
   background-color: transparent;
-  border-color: #3fa942;
-  color: #3fa942;
+  border-color: #65AD5A;
+  color: #65AD5A;
 }
 .f_btn._key8_ol:hover {
-  background-color: #3fa942;
+  background-color: #65AD5A;
   color: #fff;
 }
 .f_btn._key8_ol:active {
@@ -1602,7 +1602,7 @@ input[type=tel]:focus,
 input[type=email]:focus,
 input[type=search]:focus,
 textarea:focus {
-  border-color: #3fa942;
+  border-color: #65AD5A;
   background-color: #fff;
   outline: none;
 }
@@ -1906,10 +1906,10 @@ input::-webkit-search-results-decoration {
   background-color: #16b97a;
 }
 .nav_item8 {
-  background-color: #3fa942;
+  background-color: #65AD5A;
 }
 .nav_item8 .nav_link {
-  background-color: #3fa942;
+  background-color: #65AD5A;
 }
 .nav_item8 .nav_link:hover {
   position: relative;
@@ -1917,7 +1917,7 @@ input::-webkit-search-results-decoration {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   -webkit-clip-path: inset(-10px -10px -10px 0);
           clip-path: inset(-10px -10px -10px 0);
-  background-color: #52bf55;
+  background-color: #7ebb75;
 }
 .nav_link {
   display: flex;
@@ -2184,7 +2184,7 @@ html, body, #wrap, #container {
   background-color: #129562;
 }
 .sub_wrap.sub_8 {
-  background-color: #3fa942;
+  background-color: #65AD5A;
 }
 
 .sub_sec {
@@ -2234,7 +2234,7 @@ html, body, #wrap, #container {
   background-color: #129562;
 }
 .sub_sec.sub8 {
-  background-color: #3fa942;
+  background-color: #65AD5A;
 }
 .sub_sec .inner {
   display: flex;
@@ -3048,7 +3048,7 @@ html, body, #wrap, #container {
   width: 100%;
   padding: 2em;
   box-sizing: border-box;
-  background-color: #fff;
+  background-color: #fafafa;
   color: #222;
   border-radius: 1em;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
