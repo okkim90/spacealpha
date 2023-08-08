@@ -584,6 +584,9 @@ body {
                 li {
                     display: flex;
                     font-size: 1.1em;
+                    & + li {
+                        margin-top: 0.2em;
+                    }
                     &::before {
                         content: '-';
                         margin-right: 4px;
@@ -1069,7 +1072,7 @@ body {
             &_item {
                 display: flex;
                 @at-root .sub_wrap.ty2 & {
-                    background-color: rgba(#fff,.1);
+                    background-color: rgba(#000,.1);
                     padding: 1em;
                     border-radius: 0.6em;
                 } 
