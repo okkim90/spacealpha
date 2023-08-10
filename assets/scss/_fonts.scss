@@ -170,3 +170,17 @@
     font-weight: 300;
     src: url('../fonts/NanumSquareL.woff2') format('woff2'),
   }
+  @font-face {
+    font-display: swap;
+    font-family: 'NanumSquare';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/NanumSquareB.woff2') format('woff2'),
+  }
+  @font-face {
+    font-display: swap;
+    font-family: 'NanumSquare';
+    font-style: normal;
+    font-weight: 900;
+    src: url('../fonts/NanumSquareEB.woff2') format('woff2'),
+  }

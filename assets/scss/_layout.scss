@@ -196,6 +196,20 @@ body {
 .main_wrap {
     position: absolute;
     width: 27%;
+    &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        position: absolute;
+        background-image: url(../images/sub/main_bg.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        opacity: 0.2;
+        filter: grayscale(100%);
+    }
     
     @include mobile {
         width: 25%;
@@ -234,21 +248,34 @@ body {
             padding: 7%;
         }
         .txt_box {
-            font-size: 3vw;
-            margin-top: 0.3em;
-            font-weight: 300;
-            letter-spacing: 0.18em;
-            font-family: 'NanumSquare';
+            font-size: 2.6vw;
+            margin-top: 0.6em;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            
+            //color: #1B1D81;
+            color: #222;
+            //font-family: 'NanumSquare';
             //font-family: 'Tmonsori';
+            font-family: 'Jalnan';
+            span {
+                font-family: 'Jalnan';
+            }
             br {
                 display: none;
             }
             @include mobile {
-                font-size: 6vw;
+                font-size: 4vw;
                 margin-top: 0.5em;
                 br {
                     display: block;
                 }
+            }
+        }
+        img {
+            width: 70%;
+            @include mobile {
+                width: 100%;
             }
         }
         svg {
