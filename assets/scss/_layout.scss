@@ -224,7 +224,14 @@ body {
     align-items: center;
     background-color: #fff;
     transition: clip-path .5s .5s cubic-bezier(.57,.24,.5,1.04);
-    clip-path: ellipse(100% 80% at 0% 50%);
+    
+    @media (orientation: portrait) {
+        clip-path: ellipse(100% 80% at 0% 50%);
+    }
+
+    @media (orientation: landscape) {
+        clip-path: ellipse(100% 90% at 0% 50%);
+    }
     overflow: hidden;
     // &::after {
     //     content: '';

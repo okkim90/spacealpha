@@ -2086,8 +2086,6 @@ html, body, #wrap, #container {
   transition: -webkit-clip-path 0.5s 0.5s cubic-bezier(0.57, 0.24, 0.5, 1.04);
   transition: clip-path 0.5s 0.5s cubic-bezier(0.57, 0.24, 0.5, 1.04);
   transition: clip-path 0.5s 0.5s cubic-bezier(0.57, 0.24, 0.5, 1.04), -webkit-clip-path 0.5s 0.5s cubic-bezier(0.57, 0.24, 0.5, 1.04);
-  -webkit-clip-path: ellipse(100% 80% at 0% 50%);
-          clip-path: ellipse(100% 80% at 0% 50%);
   overflow: hidden;
 }
 .main_wrap::before {
@@ -2107,6 +2105,18 @@ html, body, #wrap, #container {
 @media (max-width: 767px) {
   .main_wrap {
     width: 25%;
+  }
+}
+@media (orientation: portrait) {
+  .main_wrap {
+    -webkit-clip-path: ellipse(100% 80% at 0% 50%);
+            clip-path: ellipse(100% 80% at 0% 50%);
+  }
+}
+@media (orientation: landscape) {
+  .main_wrap {
+    -webkit-clip-path: ellipse(100% 90% at 0% 50%);
+            clip-path: ellipse(100% 90% at 0% 50%);
   }
 }
 .main_wrap .main_logo {
