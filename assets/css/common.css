@@ -2095,11 +2095,11 @@ html, body, #wrap, #container {
   left: 0;
   top: 0;
   position: absolute;
-  background-image: url(../images/sub/main_bg.jpg);
+  background-image: url(../images/sub/main_bg3.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  opacity: 0.2;
+  opacity: 0.15;
   filter: grayscale(100%);
 }
 @media (max-width: 767px) {
