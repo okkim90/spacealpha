@@ -479,7 +479,7 @@ body {
             text-transform: uppercase;
             font-family: "Tmonsori";
             letter-spacing: 0.15em;
-            text-shadow: 0 4px 8px rgba(0,0,0,.15);
+            text-shadow: 0 2px 4px rgba(0,0,0,.08);
             @include mobile { 
                 font-size: 2.6em;
             }
@@ -656,6 +656,9 @@ body {
                     line-height: 1;
                 }
             }
+            .m_only {
+                display: none;
+            }
             @include mobile { 
                 padding: 25px 20px;
                 margin-top: 1.4em;
@@ -665,6 +668,9 @@ body {
                 }
                 .pc_only {
                     display: none;
+                }
+                .m_only {
+                    display: block;
                 }
             }
         }

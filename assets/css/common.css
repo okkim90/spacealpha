@@ -2398,7 +2398,7 @@ html, body, #wrap, #container {
   text-transform: uppercase;
   font-family: "Tmonsori";
   letter-spacing: 0.15em;
-  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 }
 @media (max-width: 767px) {
   .sub_sec .sec_tit h2 {
@@ -2593,6 +2593,9 @@ html, body, #wrap, #container {
   font-size: 1.5em;
   line-height: 1;
 }
+.sub_sec.sub1 .desc .m_only {
+  display: none;
+}
 @media (max-width: 767px) {
   .sub_sec.sub1 .desc {
     padding: 25px 20px;
@@ -2604,6 +2607,9 @@ html, body, #wrap, #container {
   }
   .sub_sec.sub1 .desc .pc_only {
     display: none;
+  }
+  .sub_sec.sub1 .desc .m_only {
+    display: block;
   }
 }
 .sub_sec.sub2 .sub2_list {
