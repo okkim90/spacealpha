@@ -12,10 +12,7 @@
 <body>
     <div id="wrap">
         <div id="container" class="container">
-            <h1 class="logo">
-                <span class="blind">스페이스알파</span>
-                <img src="../assets/images/common/logo.svg" alt="스페이스알파">
-            </h1>
+            <h1 class="logo"><span class="blind">스페이스알파</span></h1>
             <nav id="nav" class="nav">
                 <button type="button" class="nav_toggle">
                     <div class="bar_box">
@@ -25,14 +22,14 @@
                     </div>
                 </button>
                 <ul class="nav_list">
-                    <li class="nav_item nav_item1"><a href="javascript:void(0)" class="nav_link" onclick="sub_load(1)"><span class="txt">our value</span><i class="fa-solid fa-heart"></i></a></li>
-                    <li class="nav_item nav_item2"><a href="javascript:void(0)" class="nav_link" onclick="sub_load(2)"><span class="txt">strong point</span><i class="fa-solid fa-thumbs-up"></i></a></li>
-                    <li class="nav_item nav_item3"><a href="javascript:void(0)" class="nav_link" onclick="sub_load(3)"><span class="txt">consulting</span><i class="fa-solid fa-person-chalkboard"></i></a></li>
-                    <li class="nav_item nav_item4"><a href="javascript:void(0)" class="nav_link" onclick="sub_load(4)"><span class="txt">training</span><i class="fa-solid fa-user-gear"></i></a></li>
-                    <li class="nav_item nav_item5"><a href="javascript:void(0)" class="nav_link" onclick="sub_load(5)"><span class="txt">humanities</span><i class="fa-solid fa-people-group"></i></a></li>
-                    <li class="nav_item nav_item6"><a href="javascript:void(0)" class="nav_link" onclick="sub_load(6)"><span class="txt">patent</span><i class="fa-solid fa-paste"></i></a></li>
-                    <li class="nav_item nav_item7"><a href="javascript:void(0)" class="nav_link" onclick="sub_load(7)"><span class="txt">Client</span><i class="fa-solid fa-handshake"></i></a></li>
-                    <li class="nav_item nav_item8"><a href="javascript:void(0)" class="nav_link" onclick="sub_load(8)"><span class="txt">Contact</span><i class="fa-solid fa-phone"></i></a></li>
+                    <li class="nav_item nav_item1"><button class="nav_link" onclick="sub_load(1); "><span class="txt"><span class="txt_eng">our value</span>  <span class="txt_kor">가치</span> </span><i class="fa-solid fa-eye"></i></button></li>
+                    <li class="nav_item nav_item2"><button class="nav_link" onclick="sub_load(2); "><span class="txt"><span class="txt_eng">strong point</span> <span class="txt_kor">강점</span></span><i class="fa-solid fa-thumbs-up"></i></button></li>
+                    <li class="nav_item nav_item3"><button class="nav_link" onclick="sub_load(3); "><span class="txt"><span class="txt_eng">consulting</span> <span class="txt_kor">컨설팅</span></span><i class="fa-solid fa-person-chalkboard"></i></button></li>
+                    <li class="nav_item nav_item4"><button class="nav_link" onclick="sub_load(4); "><span class="txt"><span class="txt_eng">training</span> <span class="txt_kor">교육 프로그램</span></span><i class="fa-solid fa-user-gear"></i></button></li>
+                    <li class="nav_item nav_item5"><button class="nav_link" onclick="sub_load(5); "><span class="txt"><span class="txt_eng">humanities</span> <span class="txt_kor">인문학 프로그램</span></span><i class="fa-solid fa-people-group"></i></button></li>
+                    <li class="nav_item nav_item6"><button class="nav_link" onclick="sub_load(6); "><span class="txt"><span class="txt_eng">patent</span> <span class="txt_kor">특허/인증</span></span><i class="fa-solid fa-paste"></i></button></li>
+                    <li class="nav_item nav_item7"><button class="nav_link" onclick="sub_load(7); "><span class="txt"><span class="txt_eng">Client</span> <span class="txt_kor">클라이언트</span></span><i class="fa-solid fa-handshake"></i></button></li>
+                    <li class="nav_item nav_item8"><button class="nav_link" onclick="sub_load(8); "><span class="txt"><span class="txt_eng">Contact</span> <span class="txt_kor">문의</span></span><i class="fa-solid fa-phone"></i></button></li>
                 </ul>
             </nav>
             <div class="main_wrap">
@@ -57,7 +54,9 @@
                     </script>
                 </div> -->
             </div>
-            <button class="btn_home" onclick=" main_load()"><i class="fa-solid fa-house"></i></button>
+            <button class="btn_home" onclick=" main_load()">
+                <img src="../assets/images/common/logo.svg" alt="">
+            </button>
             
             <div class="sub_wrap ty2">
                 <section class="sub_sec sub1">
@@ -93,7 +92,7 @@
                                             </div>   
                                         </div>
                                         <div class="txt_box">
-                                            <h3 class="tit">ROI기반 교육 컨설팅을 통해 사람중심의 성과지향 전략적 HRD를 실현할 수 있습니다.</h3>
+                                            <h3 class="tit">ROI기반 교육 컨설팅을 통해 전략적 HRD를 실현합니다.</h3>
                                         </div>
                                     </div>
                                 </li>
@@ -117,7 +116,7 @@
                                             </div>
                                         </div>
                                         <div class="txt_box">
-                                            <h3 class="tit">고객 맞춤형 프로젝트로 80%의  재수주율을 자랑합니다.</h3>
+                                            <h3 class="tit">기관 맞춤형 프로젝트로 80%의 재 수주율을 자랑합니다.</h3>
                                         </div>
                                     </div>                                
                                 </li>
@@ -156,8 +155,8 @@
                                     <div class="txt_box">
                                         <p>다양한 분야의 전문가들이 조직의 숨겨진 문화의 코드를 발견</p>
                                         <ul>
-                                            <li>조직문화 재정립 컨설팅</li>
-                                            <li>조직의 문제해결 컨설팅</li>
+                                            <li>기업문화 재정립 컨선팅</li>
+                                            <li>기업문화 문제해결 컨설팅</li>
                                         </ul>
                                     </div>
                                 </li>
@@ -183,7 +182,7 @@
                             </div>
                             <div class="sec_desc">
                                 <h3>스페이스알파 교육</h3>
-                                <p>사람중심의 성과지향 교육으로 교육니즈분석-맞춤형솔루션개발-ROI기반 성과분석 및 제언으로 연결합니다. <br> 교육방향은 기존 교육방식에 인문학을 접목하여 교육 효과를 극대화합니다.</p>
+                                <p>사람중심의 성과지향 교육은 교육니즈분석-맞춤형솔루션 개발-ROI기반 성과분석-제언 까지를 하나로 연결 전략적 HRD를 지원합니다. <br> 교육방향은 전통 교육방식에 인문학을 접목하여 교육 효과를 극대화합니다.</p>
                             </div>
                             <ul class="sec_list">
                                 <li class="sec_list_item">
@@ -246,7 +245,7 @@
                             </div>
                             <div class="sec_desc">
                                 <h3>스페이스알파 인문학 프로그램</h3>
-                                <p>인문학 프로그램은 교육에서 이벤트로 치부되는 한계를 넘어 교육의 성과를 높이는 교육의 중요한 분야로 최고의 강사와 두 영역의 융복합 프로그램을 통해 깊이 있는 인사이트와 힐링을 제공합니다.</p>
+                                <p>교육에서 이벤트로 치부되는 한계를 넘어 교육의 성과를 높이는 교육의 중요한 분야로 <br class="pc_only">  최고의 강사와 두 영역의 융복합 프로그램 기획을 통해 깊이있는 인사이트와 힐링을 제공합니다.</p>
                             </div>
                             <ul class="sec_list d_flex">
                                 <li class="sec_list_item">
@@ -298,48 +297,40 @@
                             <div class="sec_desc">
                                 <h3>스페이스알파 특허/인증</h3>
                             </div>
-                            <ul class="sec_list">
-                                <li class="sec_list_item col_item">
-                                    <div class="item_inner">
+                            <div class="patent_wrap">
+                                <div class="patent_big patent_item col_item">
+                                    <div class="img_box">
+                                        <img src="../assets/images/sub/patent1.png" alt="" onclick="f_popup_patent(this)">
+                                    </div>
+                                    <h3><i class="fa-solid fa-certificate fc_key1"></i> 벤처기업확인서</h3> 
+                                </div>
+                                <ul class="patent_list col_item">
+                                    <li class="patent_item col_item">
                                         <div class="img_box">
-                                            <img src="../assets/images/sub/patent1.png" alt="" onclick="f_popup_patent(this)" >
+                                            <img src="../assets/images/sub/patent2.png" alt="" onclick="f_popup_patent(this)" >
                                         </div>
                                         <h3><i class="fa-solid fa-certificate fc_key1"></i> 특허결정서</h3>
-                                    </div>
-                                </li>
-                                <li class="sec_list_item col_item">
-                                    <div class="item_inner">
-                                        <div class="img_box">
-                                            <img src="../assets/images/sub/patent2.png" alt="" onclick="f_popup_patent(this)">
-                                        </div>
-                                        <h3><i class="fa-solid fa-certificate fc_key1"></i> 특허</h3>
-                                    </div>
-                                </li>
-                                <li class="sec_list_item col_item">
-                                    <div class="item_inner">
+                                    </li>
+                                    <li class="patent_item col_item">
                                         <div class="img_box">
                                             <img src="../assets/images/sub/patent3.png" alt="" onclick="f_popup_patent(this)">
                                         </div>
-                                        <h3><i class="fa-solid fa-certificate fc_key1"></i> 상표등록증</h3> 
-                                    </div>
-                                </li>
-                                <li class="sec_list_item col_item">
-                                    <div class="item_inner">
+                                        <h3><i class="fa-solid fa-certificate fc_key1"></i> 특허</h3>
+                                    </li>
+                                    <li class="patent_item col_item">
                                         <div class="img_box">
                                             <img src="../assets/images/sub/patent4.png" alt="" onclick="f_popup_patent(this)">
                                         </div>
-                                        <h3><i class="fa-solid fa-certificate fc_key1"></i> 상표등록증</h3> 
-                                    </div>
-                                </li>
-                                <li class="sec_list_item col_item">
-                                    <div class="item_inner">
+                                        <h3><i class="fa-solid fa-certificate fc_key1"></i> 상표등록증</h3>
+                                    </li>
+                                    <li class="patent_item col_item">
                                         <div class="img_box">
                                             <img src="../assets/images/sub/patent5.png" alt="" onclick="f_popup_patent(this)">
                                         </div>
-                                        <h3><i class="fa-solid fa-certificate fc_key1"></i> 벤처기업확인서</h3> 
-                                    </div>
-                                </li>
-                            </ul>
+                                        <h3><i class="fa-solid fa-certificate fc_key1"></i> 상표등록증</h3>
+                                    </li>
+                                </ul>
+                            </div> 
                         </div>
                     </div>
                     <div class="popup_patent" onclick="f_close_popup_patent()">
@@ -671,7 +662,7 @@
                                                 <textarea name="" id="" class="f_ta" placeholder="문의 내용을 입력 해주세요." required></textarea>
                                             </div>
                                             <div class="btn_area">
-                                                <button type="submit" class="f_btn  _key8">문의하기 <i class="fa-solid fa-paper-plane"></i></button>
+                                                <button type="submit" class="f_btn">문의하기 <i class="fa-solid fa-paper-plane"></i></button>
                                             </div>
                                         </form>
                                     </div>
@@ -703,7 +694,7 @@
                         </div>  
                         <footer id="footer" class="footer">
                             <div class="footer_logo">
-                                <img src="../assets/images/common/logo_footer.svg" alt="스페이스알파" class="">
+                                <img src="../assets/images/common/logo.svg" alt="스페이스알파" class="">
                             </div>
                             
                             <div class="footer_info_wrap">
