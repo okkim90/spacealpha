@@ -2011,6 +2011,7 @@ input::-webkit-search-results-decoration {
 }
 .nav_link .txt_eng {
   display: block;
+  font-family: "Jalnan";
   transition: all 0.1s ease-in-out;
 }
 .nav_link .txt_kor {
@@ -2022,6 +2023,7 @@ input::-webkit-search-results-decoration {
   transition: all 0.1s ease-in-out;
   white-space: nowrap;
   text-align: right;
+  font-size: 1.2em;
 }
 .nav_link:hover .txt_eng {
   opacity: 0;

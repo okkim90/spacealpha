@@ -164,7 +164,7 @@
             }
             &_eng {
                 display: block;
-                
+                font-family: 'Jalnan';
                 transition: all .1s ease-in-out;
             }
             &_kor {
@@ -176,7 +176,7 @@
                 transition: all .1s ease-in-out;
                 white-space: nowrap;
                 text-align: right;
-                
+                font-size: 1.2em;
             }
         }
         &:hover {
