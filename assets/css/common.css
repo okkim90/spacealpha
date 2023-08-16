@@ -1518,6 +1518,13 @@
   font-weight: 900;
   src: url("../fonts/NanumSquareEB.woff2") format("woff2");
 }
+@font-face {
+  font-display: swap;
+  font-family: "Jalnan";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/JalnanOTF00.woff") format("woff");
+}
 * {
   margin: 0;
   padding: 0;
@@ -2109,15 +2116,19 @@ html, body, #wrap, #container {
   transform: translateY(-50%);
   z-index: 10;
   text-align: center;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 .main_wrap .main_logo_inner {
-  padding: 7%;
+  width: 100%;
+  padding: 10vh 5vw;
 }
 .main_wrap .main_logo .txt_box {
-  font-size: 2.6vw;
-  margin-top: 0.6em;
+  line-height: 1;
   font-weight: 700;
   letter-spacing: 0.13em;
+  text-align: left;
   color: #222;
   font-family: "Jalnan";
   text-transform: uppercase;
@@ -2125,24 +2136,41 @@ html, body, #wrap, #container {
 .main_wrap .main_logo .txt_box span {
   font-family: "Jalnan";
 }
-.main_wrap .main_logo .txt_box br {
-  display: none;
-}
-@media (max-width: 767px) {
+@media (orientation: portrait) {
   .main_wrap .main_logo .txt_box {
-    font-size: 4vw;
-    margin-top: 0.5em;
-  }
-  .main_wrap .main_logo .txt_box br {
-    display: block;
+    font-size: 8vw;
   }
 }
-.main_wrap .main_logo img {
-  width: 70%;
+@media (orientation: landscape) {
+  .main_wrap .main_logo .txt_box {
+    font-size: 8vh;
+  }
 }
-@media (max-width: 767px) {
-  .main_wrap .main_logo img {
-    width: 100%;
+.main_wrap .main_logo_bot {
+  text-align: left;
+  margin-top: 15vh;
+}
+@media (orientation: portrait) {
+  .main_wrap .main_logo_bot img {
+    width: 25vw;
+  }
+}
+@media (orientation: landscape) {
+  .main_wrap .main_logo_bot img {
+    width: 25vh;
+  }
+}
+.main_wrap .main_logo_bot p {
+  margin-top: 10px;
+}
+@media (orientation: portrait) {
+  .main_wrap .main_logo_bot p {
+    font-size: max(2.2vw, 13px);
+  }
+}
+@media (orientation: landscape) {
+  .main_wrap .main_logo_bot p {
+    font-size: max(2.2vh, 13px);
   }
 }
 .main_wrap .main_logo svg {

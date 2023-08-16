@@ -251,7 +251,7 @@ body {
     align-items: center;
     background-color: #fff;
     transition: clip-path .5s .5s cubic-bezier(.57,.24,.5,1.04);
-    
+
     @media (orientation: portrait) {
         clip-path: ellipse(100% 80% at 0% 50%);
     }
@@ -278,15 +278,20 @@ body {
         transform: translateY(-50%);
         z-index: 10;
         text-align: center;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        
         &_inner {
-            padding: 7%;
+            width: 100%;
+            padding: 10vh 5vw;
         }
         .txt_box {
-            font-size: 2.6vw;
-            margin-top: 0.6em;
+            //font-size: max(5vw, 60px);
+            line-height: 1;
             font-weight: 700;
             letter-spacing: 0.13em;
-            
+            text-align: left;
             //color: #1B1D81;
             color: #222;
             //font-family: 'NanumSquare';
@@ -296,21 +301,45 @@ body {
             span {
                 font-family: 'Jalnan';
             }
-            br {
-                display: none;
+            
+
+            @media (orientation: portrait) {
+                font-size: 8vw;
             }
-            @include mobile {
-                font-size: 4vw;
-                margin-top: 0.5em;
-                br {
-                    display: block;
+        
+            @media (orientation: landscape) {
+                font-size: 8vh;
+            }
+            
+        }
+        // img {
+        //     width: 70%;
+        //     @include mobile {
+        //         width: 100%;
+        //     }
+        // }
+        &_bot {
+            text-align: left;
+            margin-top: 15vh;
+            img {
+                //width: 15vw;
+                @media (orientation: portrait) {
+                    width: 25vw;
+                }
+            
+                @media (orientation: landscape) {
+                    width: 25vh;
                 }
             }
-        }
-        img {
-            width: 70%;
-            @include mobile {
-                width: 100%;
+            p {
+                margin-top: 10px;
+                @media (orientation: portrait) {
+                    font-size: max(2.2vw, 13px);
+                }
+            
+                @media (orientation: landscape) {
+                    font-size: max(2.2vh, 13px);
+                }
             }
         }
         svg {
