@@ -2138,7 +2138,7 @@ html, body, #wrap, #container {
 }
 @media (orientation: portrait) {
   .main_wrap .main_logo .txt_box {
-    font-size: 8vw;
+    font-size: 7.5vw;
   }
 }
 @media (orientation: landscape) {
