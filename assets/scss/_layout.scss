@@ -420,7 +420,7 @@ body {
             }
             &_item:hover {
                 .nav_link {
-                    width: calc(100% + 20vh);
+                    width: calc(100% + 24vh);
                     
                     @include tablet{
                         width: 100%;; 

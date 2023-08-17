@@ -2256,7 +2256,7 @@ html, body, #wrap, #container {
   border-radius: 0 10px 10px 0;
 }
 .container.on .nav_item:hover .nav_link {
-  width: calc(100% + 20vh);
+  width: calc(100% + 24vh);
 }
 @media (max-width: 1024px) {
   .container.on .nav_item:hover .nav_link {
