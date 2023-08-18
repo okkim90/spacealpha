@@ -2123,7 +2123,7 @@ html, body, #wrap, #container {
   padding: 10vh 5vw;
 }
 .main_wrap .main_logo .txt_box {
-  line-height: 0.94;
+  line-height: 0.95;
   font-weight: 700;
   text-align: left;
   color: #222;
@@ -2140,7 +2140,7 @@ html, body, #wrap, #container {
 }
 @media (orientation: landscape) {
   .main_wrap .main_logo .txt_box {
-    font-size: 11.5vh;
+    font-size: 9vh;
   }
 }
 .main_wrap .main_logo_bot {
