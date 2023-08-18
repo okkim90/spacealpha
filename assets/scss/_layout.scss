@@ -133,7 +133,7 @@
                         z-index: 10;
                         box-shadow:  0 0 10px rgba(0,0,0, .2);
                         clip-path: inset(-10px -10px  -10px 0);
-                        background-color: lighten( map-get($colors, _key#{$i}) , 8%);
+                        background-color: darken( map-get($colors, _key#{$i}) , 4%);
                     }
                 }
                 
