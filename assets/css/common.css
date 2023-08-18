@@ -2088,10 +2088,6 @@ html, body, #wrap, #container {
   left: 0;
   top: 0;
   position: absolute;
-  background-image: url(../images/sub/new_bg1.jpg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
   opacity: 0.45;
 }
 @media (max-width: 767px) {
@@ -2129,23 +2125,21 @@ html, body, #wrap, #container {
 .main_wrap .main_logo .txt_box {
   line-height: 1;
   font-weight: 700;
-  letter-spacing: 0.13em;
   text-align: left;
   color: #222;
-  font-family: "Jalnan";
+  font-family: "NanumSquare";
   text-transform: uppercase;
-}
-.main_wrap .main_logo .txt_box span {
-  font-family: "Jalnan";
+  font-weight: 900;
+  color: #333;
 }
 @media (orientation: portrait) {
   .main_wrap .main_logo .txt_box {
-    font-size: 7.5vw;
+    font-size: 9.5vw;
   }
 }
 @media (orientation: landscape) {
   .main_wrap .main_logo .txt_box {
-    font-size: 8vh;
+    font-size: 11.5vh;
   }
 }
 .main_wrap .main_logo_bot {

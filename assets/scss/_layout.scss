@@ -230,10 +230,10 @@ body {
         left: 0;
         top: 0;
         position: absolute;
-        background-image: url(../images/sub/new_bg1.jpg);
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: cover;
+        // background-image: url(../images/sub/new_bg1.jpg);
+        // background-repeat: no-repeat;
+        // background-position: center center;
+        // background-size: cover;
         opacity: 0.45;
         //filter: grayscale(100%);
     }
@@ -290,25 +290,27 @@ body {
             //font-size: max(5vw, 60px);
             line-height: 1;
             font-weight: 700;
-            letter-spacing: 0.13em;
+            //letter-spacing: 0.10em;
             text-align: left;
             //color: #1B1D81;
             color: #222;
-            //font-family: 'NanumSquare';
+            font-family: 'NanumSquare';
             //font-family: 'Tmonsori';
-            font-family: 'Jalnan';
+            //font-family: 'Jalnan';
             text-transform: uppercase;
-            span {
-                font-family: 'Jalnan';
-            }
+            font-weight: 900;
+            color: #333;
+            // span {
+            //     font-family: 'Jalnan';
+            // }
             
 
             @media (orientation: portrait) {
-                font-size: 7.5vw;
+                font-size: 9.5vw;
             }
         
             @media (orientation: landscape) {
-                font-size: 8vh;
+                font-size:11.5vh;
             }
             
         }
